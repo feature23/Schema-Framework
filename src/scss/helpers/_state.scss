@@ -1,0 +1,30 @@
+/*------------------------------------*\
+
+    $State Classes
+    
+\*------------------------------------*/
+
+
+// Add these classes to form elements that
+// are successful, warnings, dangers, info, 
+// or primary colors
+
+.f-is-success {
+  border-color: $success-color !important;
+}
+
+.f-is-primary {
+  border-color: $primary-color !important;
+}
+
+.f-is-danger {
+  border-color: $danger-color !important;
+}
+
+.f-is-warning {
+  border-color: $warning-color !important;
+}
+
+.f-is-info {
+  border-color: $info-color !important;
+}

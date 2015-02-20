@@ -1,0 +1,337 @@
+/*------------------------------------*\
+
+    $Forms
+    
+\*------------------------------------*/
+
+label {
+  font-family: inherit; 
+  display: block;
+  margin-bottom: $baseline-size / 2;
+  font-weight: $label-font-weight;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  @include box-sizing(border-box);
+}
+
+// Styling the placeholder for inputs 
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $base-color-ccc;
+  font-size: inherit;
+  font-family: $primary-font; 
+}
+
+textarea {
+  height: auto; 
+  resize: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-top: 1px \9;
+  *margin-top: 0;
+  line-height: normal; 
+}
+
+
+
+
+
+// contains all form related classes
+.form-group {
+  vertical-align: middle;
+  position: relative;
+  @include rem(margin-bottom, 16px);
+}
+
+  // Use this class for appended input fields 
+  .form-element-group,
+  .form-element-group-lg,
+  .form-element-group-sm {
+    display: inline-table;
+    vertical-align: middle;
+    position: relative;
+    @include rem(margin-bottom, 16px);
+  }
+
+  .form-group::before, .form-group::after,
+  .form-element-group::before, .form-element-group::after {
+    clear: both; 
+    display: table;
+    content: "" 
+  }
+  
+
+
+@mixin form-element-type($form-type: null) {
+  @if $form-type == success {
+    border-color: $success-color;
+    background-color: lighten($success-color, 49%);
+  }
+  @else if $form-type == primary {
+    border-color: $primary-color;
+  }
+  @else if $form-type == info {
+    border-color: $info-color;
+  }
+  @else if $form-type == warning {
+    border-color: $warning-color;
+  }
+  @else if $form-type == danger {
+    border-color: $danger-color;
+    background-color: lighten($danger-color, 41.75%);
+  }
+  @else {
+    border-color: $base-color-ccc;
+  }
+}
+
+
+
+
+// has icon
+.has-icon {
+  display: block;
+}
+
+.has-icon > .fa {
+  position: relative;
+  right: 0;
+  vertical-align: middle;
+  margin-right: 1rem;
+  margin-top: .775rem;
+  float: right;
+  top: -2.45rem;
+}
+
+.form-has-success {
+  color: $success-color;
+}
+
+.form-has-primary {
+  color: $primary-color;
+}
+
+.form-has-info {
+  color: $info-color;
+}
+
+.form-has-warning {
+  color: $warning-color;
+}
+
+.form-has-danger {
+  color: $danger-color;
+}
+
+
+
+////////////////////////////////////////
+//
+// This class is the builder
+// and styler for all text input
+// fields. (text,email,etc)
+//
+////////////////////////////////////////
+.form-element {
+  background-color: $base-bg;
+  display: block;
+  width: 100%;
+  font-size: $baseline-size;
+  font-weight: $font-family-weight;
+  line-height: $base-line-height;
+  color: $base-color-777;
+  vertical-align: middle; 
+  font-family: $primary-font;
+  padding: $base-padding-vertical $base-padding-horizontal;
+  border: 1px solid $base-color-ccc;
+  outline: 0;
+  @include border-radius($border-radius);
+  -webkit-appearance: none;
+  -webkit-transition: border linear 0.25s, box-shadow linear 0.25s;
+     -moz-transition: border linear 0.25s, box-shadow linear 0.25s;
+       -o-transition: border linear 0.25s, box-shadow linear 0.25s;
+          transition: border linear 0.25s, box-shadow linear 0.25s;
+}
+
+.form-element-success {
+  @extend .form-element;
+  @include form-element-type(success);
+}
+
+.form-element-primary {
+  @extend .form-element;
+  @include form-element-type(primary);
+}
+
+.form-element-info {
+  @extend .form-element;
+  @include form-element-type(info);
+}
+
+.form-element-warning {
+  @extend .form-element;
+  @include form-element-type(warning);
+}
+
+.form-element-danger {
+  @extend .form-element;
+  @include form-element-type(danger);
+}
+
+
+
+
+
+// Adds a background color on disabled form-elements
+.form-element.is-disabled {
+  background-color: $base-color-eee;
+}
+
+//Form Element Lg - 
+.form-element-lg,
+.form-element-lg > .form-element,
+.form-element-lg > .form-element-extra,
+.form-element-group-lg > .form-element, 
+.form-element-group-lg > .form-element-extra,
+.form-element-group-lg > .form-group-btn:first-child > .btn,
+.form-element-group-lg > .form-group-btn:last-child > .btn {
+  padding: $base-padding-lg-vertical $base-padding-lg-horizontal;
+  line-height: $line-height-lg;
+  font-size: $btn-font-size-lg;
+}
+
+//
+.form-element-lg > .form-element.btn-pill,
+.form-element-lg > .form-element-extra.btn-pill,
+.form-element-group-lg > .form-element.btn-pill,
+.form-element-group-lg > .form-element-extra.btn-pill,
+.form-element-lg > .form-group-btn:first-child > .btn.btn-pill,
+.form-element-lg > .form-group-btn:last-child > .btn.btn-pill
+.form-element-group-lg > .form-group-btn:first-child > .btn.btn-pill,
+.form-element-group-lg > .form-group-btn:last-child > .btn.btn-pill {
+  @include border-radius($border-radius * 10);  
+}
+
+.form-element-sm,
+.form-element-sm > .form-element,
+.form-element-sm > .form-element-extra,
+.form-element-group-sm > .form-element,
+.form-element-group-sm > .form-element-extra,
+.form-element-sm > .form-group-btn:first-child > .btn,
+.form-element-sm > .form-group-btn:last-child > .btn 
+.form-element-group-sm > .form-group-btn:first-child > .btn,
+.form-element-group-sm > .form-group-btn:last-child > .btn{
+  padding: ($base-padding-sm-vertical / 1.75) $base-padding-sm-horizontal;
+  line-height: $line-height-sm;
+  font-size: $btn-font-size-sm;
+}
+
+// This is the design details on :focus
+.form-element:focus {
+  outline: 0;
+  outline: thin dotted \9;
+  border-color: rgb(36,202,188);
+  @include box-shadow(0 0 8px rgba(36,202,188, .6));
+}
+
+.form-element-extra,
+.form-group-extra,
+.form-group-btn {
+  display: table-cell;
+}
+
+// This is the add-on in the front or back if input groups
+.form-element-extra {
+  background-color: $base-color-eee;
+  border: 1px solid $base-color-ccc;
+  padding: $base-padding-vertical $base-padding-horizontal;
+  vertical-align: middle; 
+  font-family: $primary-font;
+  @include text-center;
+  vertical-align: middle;
+  z-index: $zindex-1000;
+  display: table-cell;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.form-element-group > .form-element-extra:first-child,
+.form-element-group-lg > .form-element-extra:first-child,
+.form-element-group-sm > .form-element-extra:first-child,
+.form-element-group > .btn-group > .btn:first-child,
+.btn-group > .btn:first-child,
+.btn-group-lg > .btn:first-child,
+.btn-group-sm > .btn:first-child,
+.form-element-group > .btn-group-lg > .btn:first-child,
+.form-element-group > .form-group-btn:first-child > .btn,
+.form-element-group-lg > .form-group-btn:first-child > .btn,
+.form-element-group-lg > .form-element-extra:first-child,
+.form-element-group-lg > .btn-group > .btn:first-child,
+.form-element-group-lg > .btn-group-lg > .btn:first-child,
+.pagination > ul > li:first-child > .btn,
+.pagination > ul > li:first-child {
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+  margin-left: 1px;
+}
+
+  .form-element-group > .form-element-extra:last-child,
+  .form-element-group-lg > .form-element-extra:last-child,
+  .form-element-group-sm > .form-element-extra:last-child,
+  .form-element-group > .form-group-btn:last-child > .btn,
+  .form-element-group-lg > .form-group-btn > .btn,
+  .form-element-group-sm > .form-group-btn > .btn,
+  .btn-group > .btn:last-child,
+  .btn-group > .btn:last-child,
+  .btn-group-lg > .btn:last-child,
+  .btn-group-sm > .btn:last-child,
+  .pagination > ul > li:last-child > .btn,
+  .pagination > ul > li:last-child {
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+  
+  .form-element-group > .form-element-extra:last-child,
+  .form-element-group-lg > .form-element-extra:last-child,
+  .form-element-group-sm > .form-element-extra:last-child,
+  .pagination > ul > li:last-child,
+  .pagination > ul > li:last-child > .btn {
+    border-left: 0;
+  }
+
+.form-element-group .form-element:last-child,
+.form-element-group-lg .form-element:last-child,
+.form-element-group-sm .form-element:last-child,
+.form-element-element > .form-group-btn:last-child > .btn,
+.form-element-group > .form-group-btn > .btn,
+.form-element-group-lg > .form-group-btn > .btn,
+.form-element-group-sm > .form-group-btn > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+}
+
+  .form-element-group .form-element:first-child,
+  .form-element-group-lg .form-element:first-child,
+  .form-element-group-sm .form-element:first-child,
+  .form-group-btn:first-child > .btn,
+  .form-element-group-btn:first-child > .btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: -1px;
+  }
+    
+.form-group-extra,
+.form-group-btn {
+  width: 1%;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.form-group-btn > button > i:before {
+  margin: 0;
+}

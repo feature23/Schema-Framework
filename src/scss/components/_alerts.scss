@@ -1,0 +1,145 @@
+/*------------------------------------*\
+
+    $Alerts
+    
+\*------------------------------------*/
+
+////////////////////////////////////////
+//
+// This mixin helps create your alerts
+// by assigning border, color, and
+// background colors.
+//
+////////////////////////////////////////
+
+@mixin alert($alert-style: null) {
+  // Success
+  @if $alert-style == success {
+    color: darken($success-color, 10%);
+    border-color: $success-color;
+    background-color: lighten($success-color, 46.5%);
+  }
+  // Danger
+  @else if $alert-style == danger {
+    color: darken($danger-color, 10%);
+    border-color: $danger-color;
+    background-color: lighten($danger-color, 40.5%);
+  }
+  // Info
+  @else if $alert-style == info {
+    color: darken($info-color, 10%);
+    border-color: $info-color;
+    background-color: lighten($info-color, 51.5%);
+  }
+  // Warning
+  @else if $alert-style == warning {
+    color: darken($warning-color, 10%);
+    border-color: $warning-color;
+    background-color: lighten($warning-color, 44.5%);
+  }
+  // Primary 
+  @else if $alert-style == primary {
+    color: darken($primary-color, 10%);
+    border-color: $primary-color;
+    background-color: lighten($primary-color, 44.5%);
+  }
+}
+
+
+
+
+
+////////////////////////////////////////
+//
+// Use this class to extend your alerts.
+//
+////////////////////////////////////////
+
+.alert {
+  border: 1px solid transparent;
+  display: block;
+  padding: 1rem;
+  @include border-radius($border-radius);
+  
+  h4 {
+    color: inherit;
+    margin-top: 0;
+  }
+  
+  p {
+    color: inherit;
+    margin: 0;
+  }
+  
+  i,
+  span {
+    float: right;
+  }
+
+  a {
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .btn {
+    margin-top: 1.4rem;
+  }
+}
+
+.alert i:before,
+.alert .fa:before {
+  display: inline-block;
+  @include rem(margin-top, 3px);
+}
+
+.alert a,
+.alert a:hover {
+  color: inherit;
+  font-weight: bold;
+}
+
+span.close {
+  @include right-float;
+  color: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
+////////////////////////////////////////
+//
+// Use these classes in your html
+// to for whatever alert you're 
+// needing to use.
+//
+////////////////////////////////////////
+
+.alert-success {
+  @include alert(success);
+  @extend .alert;
+}
+
+.alert-primary {
+  @include alert(primary);
+  @extend .alert;
+}
+
+.alert-info {
+  @include alert(info);
+  @extend .alert;
+}
+
+.alert-warning {
+  @include alert(warning);
+  @extend .alert;
+}
+
+.alert-danger {
+  @include alert(danger);
+  @extend .alert;
+}

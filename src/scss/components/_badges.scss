@@ -1,0 +1,84 @@
+/*------------------------------------*\
+
+    $Badges
+    
+\*------------------------------------*/
+
+.badge {
+  display: inline-block;
+  padding: ($base-padding-sm-vertical / 1.5) ($base-padding-sm-horizontal / 1);
+  font-weight: $weight-400;
+  line-height: (($base-line-height * 0) + 1);
+  color: $base-white;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: $base-color-777;;
+  @include border-radius($border-radius * 20);
+  @include rem(font-size, 14px);
+  @include rem(min-width, 10px);
+}
+
+.badge.success {
+  background-color: $success-color;
+}
+.badge.primary {
+  background-color: $primary-color;
+}
+.badge.danger {
+  background-color: $danger-color;
+}
+.badge.warning {
+  background-color: $warning-color;
+}
+.badge.info {
+  background-color: $info-color;
+}
+
+.btn > .badge {
+  @include rem(margin-left, 8px);
+}
+
+// This removes the text-shadow
+// on the badge inside of gradient buttons
+// because it's a white shadow on a white 
+// text, and it's not legible. 
+[class^="btn"] span.badge {
+  text-shadow: 0 0;
+}
+
+.btn-primary .badge,
+.btn-success .badge,
+.btn-warning .badge,
+.btn-info .badge,
+.btn-danger .badge,
+.list-group-element.active .badge {
+  background-color: $base-white;
+  text-shadow: none;
+}
+  
+  .list-group-element.active .badge {
+    color: $info-color;
+  }
+
+  .btn-primary .badge {
+    color: $primary-color;
+  }
+  
+  .btn-success .badge {
+    color: $success-color;
+  }
+  
+  .btn-info .badge {
+    color: $info-color;
+  }
+  
+  .btn-warning .badge {
+    color: $warning-color;
+  }
+  
+  .btn-danger .badge {
+    color: $danger-color;
+  }
+  
+  

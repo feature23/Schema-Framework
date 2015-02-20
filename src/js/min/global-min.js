@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".close").click(function(e){var n=$(e.currentTarget).parents(".alert-gone");n.removeClass("in"),setTimeout(function(){n.remove()},450)}),$(".close").click(function(e){var n=$(e.currentTarget).parents(".alert-hide");n.removeClass("in")})});

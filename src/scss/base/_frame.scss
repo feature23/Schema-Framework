@@ -1,0 +1,45 @@
+/*------------------------------------*\
+
+    $Frame
+    
+\*------------------------------------*/
+
+body {
+  background-color: $base-white;
+  color: $text-color;
+  font-family: $primary-font;
+  font-weight: $font-family-weight;
+  line-height: $base-line-height;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
+  @include rem(font-size, 16px);
+}
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  @include transition(all .25s ease);
+}
+
+a:hover {
+  color: $link-color-hover;
+  text-decoration: underline;
+}
+
+ul, ol {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+hr {
+  @include hr(1px, $base-color-eee);
+}

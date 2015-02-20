@@ -1,0 +1,408 @@
+// =============================================================
+//     
+//  REM to Pixel Mixin.
+//  This mixin gives a REM value
+//  and provides a pixel fallback.
+//  
+// ============================================================= 
+
+$base-px: 16px;
+
+@mixin rem($property, $px-value) {
+  
+  $base-rem: $base-px / 1rem;
+  #{$property}: $px-value;
+  
+  @if type-of($px-value) == 'number' {
+    #{$property}: $px-value / $base-rem;
+  } @else {
+    $rem-value: ();
+    @each $value in $px-value {
+      @if $value == 0 or type-of($value) != 'number' {
+        $rem-value: append($rem-value, $value);
+      } @else {
+        $rem-value: append($rem-value, $value / $base-rem); 
+      } 
+    } 
+    #{$property}: $rem-value;
+  }
+}
+
+// Example
+//
+// @include rem(padding-top, 16px);
+
+
+// Outputs to:
+//
+// .selector {
+//   padding-top: 16px;
+//   padding-top: 1rem;
+// } 
+
+
+
+
+// =============================================================
+// 
+//  Breakpoint mixin
+// 
+// =============================================================
+
+@mixin bp($breakpoint) {
+  @if $breakpoint == "mobile" {
+    @media (max-width: 47.9375rem) {
+      @content;
+    }
+  }
+ 
+  @else if $breakpoint == "tablet" {
+    @media (min-width: 48rem) and (max-width: 61.1875rem) {
+      @content;
+    }
+  }
+ 
+  @else if $breakpoint == "desktop" {
+    @media (min-width: 75rem) {
+      @content;
+    }
+  }
+}
+
+
+
+
+// =============================================================
+//     
+//  A button builder
+//  Create different buttons with color,
+//  background color, and border color.
+//  
+// =============================================================
+
+@mixin button-version ($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  @include transition(all .25s ease);
+  
+  &:hover {
+    background-color: darken($background, 5%);
+    border-color: darken($border, 5%);
+  }
+  &:active {
+    color: $color;
+    background-color: darken($background, 8.5%);
+    border-color: darken($border, 8.5%);
+    @include box-shadow(inset 0px 2px 4px 1px rgba(0,0,0,.15));
+    outline: 0;
+  }
+}
+
+@mixin button-size($button-padding-vertical, $button-padding-horizontal, $button-font-size, $button-line-height, $button-border-radius) {
+  padding: $button-padding-vertical $button-padding-horizontal;
+  font-size: $button-font-size;
+  line-height: $button-line-height;
+  border-radius: $button-border-radius;
+}
+
+
+
+
+
+  
+// =============================================================
+//     
+//  Horizontal Rule Mixins
+//  
+// =============================================================
+
+@mixin hr($size, $color) {
+  border-top: $size solid $color;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  height: 1px;
+  margin: 1rem 0;
+  @include box-sizing(border-box);
+}
+
+
+
+
+
+// =============================================================
+//     
+//  Border-style Mixin
+//  
+// =============================================================
+
+@mixin border-style-bottom($border-width, $border-style, $border-color) {
+  border-width: $border-width;
+  border-style: $border-style;
+  border-color: $border-color;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+}
+
+@mixin border-style-left($border-width, $border-style, $border-color) {
+  border-width: $border-width;
+  border-style: $border-style;
+  border-color: $border-color;
+  border-bottom: transparent;
+  border-top: transparent;
+  border-right: transparent;
+}
+
+@mixin border-style-right($border-width, $border-style, $border-color) {
+  border-width: $border-width;
+  border-style: $border-style;
+  border-color: $border-color;
+  border-bottom: transparent;
+  border-left: transparent;
+  border-top: transparent;
+}
+
+@mixin border-style-top($border-width, $border-style, $border-color) {
+  border-width: $border-width;
+  border-style: $border-style;
+  border-color: $border-color;
+  border-bottom: transparent;
+  border-left: transparent;
+  border-right: transparent;
+}
+
+
+
+
+
+// =============================================================
+//     
+//  Box-sizing Mixin
+//  
+// =============================================================
+
+@mixin box-sizing($value) {
+  -moz-box-sizing: $value;
+  -o-box-sizing: $value;
+  -webkit-box-sizing: $value;
+  box-sizing: $value;
+}
+
+
+
+
+
+// ============================================================
+//     
+//  Border-radius Mixin
+//  
+// ============================================================ 
+      
+@mixin border-radius ($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius; }
+  
+@mixin border-radius-top-radius($radius) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin border-radius-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin border-radius-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-radius-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+
+
+
+
+// =============================================================
+//     
+//  Box-shadow mixin
+//  
+// =============================================================
+
+@mixin box-shadow($value...) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
+
+
+
+
+
+// =============================================================
+//     
+//  Opacity Mixin
+//  
+// ============================================================= 
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+}
+
+
+
+
+
+// =============================================================
+//     
+//  Transition Mixin
+//  
+// =============================================================
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  transition: $transition;
+}
+
+
+
+
+
+// =============================================================
+//     
+//  Rotate Mixin
+//  
+// =============================================================
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);    
+  -moz-transform: rotate($deg);   
+  -ms-transform: rotate($deg);   
+   -o-transform: rotate($deg);
+      transform: rotate($deg);
+}
+
+
+
+
+
+// =============================================================
+//     
+//  Transforms Mixin
+//  
+// ============================================================= 
+
+@mixin skew($skew) {
+  -webkit-transform: skew($skew);
+  -moz-transform: skew($skew);
+  -ms-transform: skew($skew);
+  -o-transform: skew($skew);
+  transform: skew($skew);
+}
+
+@mixin scale($scale) {
+  -webkit-transform: scale($scale);
+  -moz-transform: scale($scale);
+  -ms-transform: scale($scale);
+  -o-transform: scale($scale);
+  transform: scale($scale);
+}
+
+@mixin scale-3d($scale3d) {
+  -webkit-transform: scale3d($scale3d);
+  -moz-transform: scale3d($scale3d);
+  -ms-transform: scale3d($scale3d);
+  -o-transform: scale3d($scale3d);
+  transform: scale3d($scale3d);
+}
+
+@mixin translate ($x, $y) {
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+@mixin translateX ($value) {
+  -webkit-transform: translateX($value);
+  -moz-transform: translateX($value);
+  -ms-transform: translateX($value);
+  -o-transform: translateX($value);
+  transform: translateX($value);
+}
+
+@mixin translateY ($value) {
+  -webkit-transform: translateY($value);
+  -moz-transform: translateY($value);
+  -ms-transform: translateY($value);
+  -o-transform: translateY($value);
+  transform: translateY($value);
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+@mixin rotateX($deg) {
+  -webkit-transform: rotateX($deg);
+  -moz-transform: rotateX($deg);
+  -ms-transform: rotateX($deg);
+  -o-transform: rotateX($deg);
+  transform: rotateX($deg);
+}
+
+@mixin rotateY($deg) {
+  -webkit-transform: rotateY($deg);
+  -moz-transform: rotateY($deg);
+  -ms-transform: rotateY($deg);
+  -o-transform: rotateY($deg);
+  transform: rotateY($deg);
+}
+
+
+
+
+// =============================================================
+//     
+//  Gradient Mixin
+//  
+// =============================================================
+
+@mixin gradient($color, $stop, $start) {
+    background: $color;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $start), color-stop(1, $stop));
+    background: -ms-linear-gradient(bottom, $start, $stop);
+    background: -moz-linear-gradient(center bottom, $start 0%, $stop 100%);
+    background: -o-linear-gradient($stop, $start);
+    background-image: linear-gradient(top, $start, $stop);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$start}', EndColorStr='#{$stop}');
+}
+
+
+
+
+// =============================================================
+//     
+//  Panel Title Builder
+//  
+// =============================================================
+
+@mixin panel-title($bg, $color, $border-bottom-color) {
+  background-color: $bg;
+  color: $color;
+  border-bottom-color: $border-bottom-color;
+}
