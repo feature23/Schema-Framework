@@ -1,588 +1,16 @@
-/* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
-/**
- * Establish a vertical rhythm unit using $base-font-size, $base-line-height,
- * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
- * body `font-size` is set using `em` units.
- */
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-}
-
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
-
-/**
- * Remove default margin.
- */
-body {
-  margin: 0;
-}
-
-/* HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  /* 1 */
-  *display: inline;
-  *zoom: 1;
-  vertical-align: baseline;
-  /* 2 */
-}
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- */
-[hidden] {
-  display: none;
-}
-
-/**
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
- */
-template {
-  display: none;
-}
-
-/* Links
-   ========================================================================== */
-/**
- * Remove the gray background color from active links in IE 10.
- */
-a {
-  background-color: transparent;
-}
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-a:active,
-a:hover {
-  outline: 0;
-}
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
-b,
-strong {
-  font-weight: bold;
-}
-
-/**
- * Set 1 unit of vertical rhythm on the top and bottom margin.
- */
-blockquote {
-  margin: 24px 40px;
-  margin: 1.5rem 2.5rem;
-}
-
-/**
- * Address styling not present in Safari and Chrome.
- */
-dfn {
-  font-style: italic;
-}
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-h1 {
-  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
-  font-size: 32px;
-  font-size: 2rem;
-  line-height: 48px;
-  line-height: 3rem;
-  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
-  margin-top: 24px;
-  margin-top: 1.5rem;
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
-}
-
-h2 {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 48px;
-  line-height: 3rem;
-  margin-top: 24px;
-  margin-top: 1.5rem;
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
-}
-
-h3 {
-  font-size: 19px;
-  font-size: 1.17rem;
-  line-height: 24px;
-  line-height: 1.5rem;
-  margin-top: 24px;
-  margin-top: 1.5rem;
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
-}
-
-h4 {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 24px;
-  line-height: 1.5rem;
-  margin-top: 24px;
-  margin-top: 1.5rem;
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
-}
-
-h5 {
-  font-size: 13px;
-  font-size: 0.83rem;
-  line-height: 24px;
-  line-height: 1.5rem;
-  margin-top: 24px;
-  margin-top: 1.5rem;
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
-}
-
-h6 {
-  font-size: 11px;
-  font-size: 0.67rem;
-  line-height: 24px;
-  line-height: 1.5rem;
-  margin-top: 24px;
-  margin-top: 1.5rem;
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-/**
- * Set 1 unit of vertical rhythm on the top and bottom margin.
- */
-p,
-pre {
-  margin: 24px 0;
-  margin: 1.5rem 0;
-}
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-/* Lists
-   ========================================================================== */
-/**
- * Address margins set differently in IE 6/7.
- */
-dl,
-menu,
-ol,
-ul {
-  margin: 24px 0;
-  margin: 1.5rem 0;
-}
-
-dd {
-  margin: 0 0 0 40px;
-}
-
-/**
- * Address paddings set differently in IE 6/7.
- */
-menu,
-ol,
-ul {
-  padding: 0 0 0 40px;
-}
-
-/**
- * Correct list images handled incorrectly in IE 7.
- */
-nav ul,
-nav ol {
-  list-style: none;
-  list-style-image: none;
-}
-
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9/10.
- */
-img {
-  border: 0;
-  /* Improve image quality when scaled in IE 7. */
-  -ms-interpolation-mode: bicubic;
-}
-
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* Grouping content
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-figure {
-  margin: 24px 40px;
-  margin: 1.5rem 2.5rem;
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-hr {
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-/**
- * Contain overflow in all browsers.
- */
-pre {
-  overflow: auto;
-}
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-/* Forms
-   ========================================================================== */
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-/**
- * Correct margin displayed oddly in IE 6/7.
- */
-form {
-  margin: 0;
-}
-
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- * 4. Address `font-family` inconsistency between `textarea` and other form in IE 7
- * 5. Improve appearance and consistency with IE 6/7.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-  *font-family: sans-serif;
-  /* 4 */
-  *vertical-align: middle;
-  /* 5 */
-}
-
-/**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
- */
-button {
-  overflow: visible;
-}
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
- */
-button,
-select {
-  text-transform: none;
-}
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
- *    Known issue: inner spacing remains in IE 6.
- */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
-  *overflow: visible;
-  /* 4 */
-}
-
-/**
- * Re-set default cursor for disabled elements.
- */
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-input {
-  line-height: normal;
-}
-
-/**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- * 3. Remove excess padding in IE 7.
- *    Known issue: excess padding remains in IE 6.
- */
-input[type="checkbox"],
-input[type="radio"] {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-  *height: 13px;
-  /* 3 */
-  *width: 13px;
-  /* 3 */
-}
-
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
- */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  /* 2 */
-  /**
-   * Remove inner padding and search cancel button in Safari and Chrome on OS X.
-   * Safari (but not Chrome) clips the cancel button when the search input has
-   * padding (and `textfield` appearance).
-   */
-}
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Define consistent border, margin, and padding.
- */
-fieldset {
-  margin: 0 2px;
-  /* Apply borders and padding that keep the vertical rhythm. */
-  border-color: #c0c0c0;
-  border-top-width: 1px;
-  border-top-width: 0.0625rem;
-  border-top-style: solid;
-  padding-top: 7px;
-  padding-top: 0.4625rem;
-  border-bottom-width: 1px;
-  border-bottom-width: 0.0625rem;
-  border-bottom-style: solid;
-  padding-bottom: 15px;
-  padding-bottom: 0.9125rem;
-  border-left-width: 1px;
-  border-left-width: 0.0625rem;
-  border-left-style: solid;
-  padding-left: 14px;
-  padding-left: 0.875rem;
-  border-right-width: 1px;
-  border-right-width: 0.0625rem;
-  border-right-style: solid;
-  padding-right: 14px;
-  padding-right: 0.875rem;
-}
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- * 3. Correct alignment displayed oddly in IE 6/7.
- */
-legend {
-  border: 0;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-  *margin-left: -7px;
-  /* 3 */
-}
-
-/**
- * Remove default vertical scrollbar in IE 8/9/10/11.
- */
-textarea {
-  overflow: auto;
-}
-
-/**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
-optgroup {
-  font-weight: bold;
-}
-
-/* Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
-  padding: 0;
-}
-
 /*------------------------------------*\
 
     $Clearfix
     
 \*------------------------------------*/
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
 /*------------------------------------*\
 
     $Frame
@@ -1191,6 +619,7 @@ span.close {
 .btn-group-sm,
 .pagination > ul > li,
 .pagination > ul > li > a {
+  float: left;
   display: inline-block;
   position: relative;
   vertical-align: middle;
@@ -1206,7 +635,6 @@ span.close {
 }
 
 .pagination > ul > li > a {
-  border: 1px solid #cccccc;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -1214,18 +642,12 @@ span.close {
 
 .pagination-gradient > ul > li {
   background: #eeeeee;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fff), color-stop(1, #eeeeee));
-  background: -ms-linear-gradient(bottom, #fff, #eeeeee);
-  background: -moz-linear-gradient(center bottom, #fff 0%, #eeeeee 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(1, #fff));
+  background: -ms-linear-gradient(bottom, #eeeeee, #fff);
+  background: -moz-linear-gradient(center bottom, #eeeeee 0%, #fff 100%);
   background: -o-linear-gradient(#eeeeee, #fff);
-  background-image: linear-gradient(to bottom, #ffffff, #eeeeee);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fff', EndColorStr='#eeeeee');
-}
-
-.pagination > ul > li > a,
-.pagination > ul > li > button {
-  background-color: transparent;
-  background: transparent;
+  background-image: linear-gradient(top, #eeeeee, #fff);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#eeeeee', EndColorStr='#fff');
 }
 
 .btn-group > .btn,
@@ -1263,8 +685,10 @@ span.close {
 .pagination > ul > li.active,
 .pagination > ul > li > .active {
   background-color: #24cabc;
+  background: #24cabc;
   color: #fff;
   border-color: #24cabc;
+  text-shadow: none;
 }
 
 /* Pagination Large Size */
@@ -1480,12 +904,12 @@ a:hover.btn-default-gradient {
 .btn-default-gradient,
 .default-gradient {
   background: #cccccc;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #fff), color-stop(1, whitesmoke));
-  background: -ms-linear-gradient(bottom, #fff, whitesmoke);
-  background: -moz-linear-gradient(center bottom, #fff 0%, whitesmoke 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, whitesmoke), color-stop(1, #fff));
+  background: -ms-linear-gradient(bottom, whitesmoke, #fff);
+  background: -moz-linear-gradient(center bottom, whitesmoke 0%, #fff 100%);
   background: -o-linear-gradient(whitesmoke, #fff);
-  background-image: linear-gradient(to bottom, #ffffff, #f5f5f5);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fff', EndColorStr='whitesmoke');
+  background-image: linear-gradient(top, whitesmoke, #fff);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='whitesmoke', EndColorStr='#fff');
   border: 1px solid #cccccc;
   text-shadow: 0 1px 0 white;
 }
@@ -1496,7 +920,7 @@ a:hover.btn-default-gradient {
   background: -ms-linear-gradient(bottom, whitesmoke, whitesmoke);
   background: -moz-linear-gradient(center bottom, whitesmoke 0%, whitesmoke 100%);
   background: -o-linear-gradient(whitesmoke, whitesmoke);
-  background-image: linear-gradient(to bottom, #f5f5f5, #f5f5f5);
+  background-image: linear-gradient(top, whitesmoke, whitesmoke);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='whitesmoke', EndColorStr='whitesmoke');
 }
 .btn-default-gradient:active,
@@ -1572,12 +996,12 @@ a:hover.btn-default-gradient {
 .btn-primary-gradient,
 .primary-gradient {
   background: #3498db;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #8bc4ea), color-stop(1, #2b94d9));
-  background: -ms-linear-gradient(bottom, #8bc4ea, #2b94d9);
-  background: -moz-linear-gradient(center bottom, #8bc4ea 0%, #2b94d9 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2b94d9), color-stop(1, #8bc4ea));
+  background: -ms-linear-gradient(bottom, #2b94d9, #8bc4ea);
+  background: -moz-linear-gradient(center bottom, #2b94d9 0%, #8bc4ea 100%);
   background: -o-linear-gradient(#2b94d9, #8bc4ea);
-  background-image: linear-gradient(to bottom, #8bc4ea, #2b94d9);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#8bc4ea', EndColorStr='#2b94d9');
+  background-image: linear-gradient(top, #2b94d9, #8bc4ea);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2b94d9', EndColorStr='#8bc4ea');
   color: #fff;
   border: 1px solid #3498db;
 }
@@ -1588,7 +1012,7 @@ a:hover.btn-default-gradient {
   background: -ms-linear-gradient(bottom, #3498db, #3498db);
   background: -moz-linear-gradient(center bottom, #3498db 0%, #3498db 100%);
   background: -o-linear-gradient(#3498db, #3498db);
-  background-image: linear-gradient(to bottom, #3498db, #3498db);
+  background-image: linear-gradient(top, #3498db, #3498db);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3498db', EndColorStr='#3498db');
   border-color: rgba(0, 0, 0, 0.08);
 }
@@ -1665,12 +1089,12 @@ a:hover.btn-default-gradient {
 .btn-danger-gradient,
 .danger-gradient {
   background: #e74c3c;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f29f97), color-stop(1, #e64433));
-  background: -ms-linear-gradient(bottom, #f29f97, #e64433);
-  background: -moz-linear-gradient(center bottom, #f29f97 0%, #e64433 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e64433), color-stop(1, #f29f97));
+  background: -ms-linear-gradient(bottom, #e64433, #f29f97);
+  background: -moz-linear-gradient(center bottom, #e64433 0%, #f29f97 100%);
   background: -o-linear-gradient(#e64433, #f29f97);
-  background-image: linear-gradient(to bottom, #f29f97, #e64433);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f29f97', EndColorStr='#e64433');
+  background-image: linear-gradient(top, #e64433, #f29f97);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#e64433', EndColorStr='#f29f97');
   color: #fff;
   border: 1px solid #e74c3c;
 }
@@ -1681,7 +1105,7 @@ a:hover.btn-default-gradient {
   background: -ms-linear-gradient(bottom, #e74c3c, #e74c3c);
   background: -moz-linear-gradient(center bottom, #e74c3c 0%, #e74c3c 100%);
   background: -o-linear-gradient(#e74c3c, #e74c3c);
-  background-image: linear-gradient(to bottom, #e74c3c, #e74c3c);
+  background-image: linear-gradient(top, #e74c3c, #e74c3c);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#e74c3c', EndColorStr='#e74c3c');
   border-color: rgba(0, 0, 0, 0.08);
 }
@@ -1758,12 +1182,12 @@ a:hover.btn-default-gradient {
 .btn-info-gradient,
 .info-gradient {
   background: #24cabc;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #6fe5db), color-stop(1, #22c1b4));
-  background: -ms-linear-gradient(bottom, #6fe5db, #22c1b4);
-  background: -moz-linear-gradient(center bottom, #6fe5db 0%, #22c1b4 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #22c1b4), color-stop(1, #6fe5db));
+  background: -ms-linear-gradient(bottom, #22c1b4, #6fe5db);
+  background: -moz-linear-gradient(center bottom, #22c1b4 0%, #6fe5db 100%);
   background: -o-linear-gradient(#22c1b4, #6fe5db);
-  background-image: linear-gradient(to bottom, #6fe5db, #22c1b4);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#6fe5db', EndColorStr='#22c1b4');
+  background-image: linear-gradient(top, #22c1b4, #6fe5db);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#22c1b4', EndColorStr='#6fe5db');
   color: #fff;
   border: 1px solid #24cabc;
 }
@@ -1774,7 +1198,7 @@ a:hover.btn-default-gradient {
   background: -ms-linear-gradient(bottom, #24cabc, #24cabc);
   background: -moz-linear-gradient(center bottom, #24cabc 0%, #24cabc 100%);
   background: -o-linear-gradient(#24cabc, #24cabc);
-  background-image: linear-gradient(to bottom, #24cabc, #24cabc);
+  background-image: linear-gradient(top, #24cabc, #24cabc);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#24cabc', EndColorStr='#24cabc');
   border-color: rgba(0, 0, 0, 0.08);
 }
@@ -1851,12 +1275,12 @@ a:hover.btn-default-gradient {
 .btn-warning-gradient,
 .warning-gradient {
   background: #f39c12;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f8c573), color-stop(1, #ef970c));
-  background: -ms-linear-gradient(bottom, #f8c573, #ef970c);
-  background: -moz-linear-gradient(center bottom, #f8c573 0%, #ef970c 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ef970c), color-stop(1, #f8c573));
+  background: -ms-linear-gradient(bottom, #ef970c, #f8c573);
+  background: -moz-linear-gradient(center bottom, #ef970c 0%, #f8c573 100%);
   background: -o-linear-gradient(#ef970c, #f8c573);
-  background-image: linear-gradient(to bottom, #f8c573, #ef970c);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f8c573', EndColorStr='#ef970c');
+  background-image: linear-gradient(top, #ef970c, #f8c573);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ef970c', EndColorStr='#f8c573');
   color: #fff;
   border: 1px solid #f39c12;
 }
@@ -1867,7 +1291,7 @@ a:hover.btn-default-gradient {
   background: -ms-linear-gradient(bottom, #f39c12, #f39c12);
   background: -moz-linear-gradient(center bottom, #f39c12 0%, #f39c12 100%);
   background: -o-linear-gradient(#f39c12, #f39c12);
-  background-image: linear-gradient(to bottom, #f39c12, #f39c12);
+  background-image: linear-gradient(top, #f39c12, #f39c12);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f39c12', EndColorStr='#f39c12');
   border-color: rgba(0, 0, 0, 0.08);
 }
@@ -1944,12 +1368,12 @@ a:hover.btn-default-gradient {
 .btn-success-gradient,
 .success-gradient {
   background: #2ecc71;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #7ee2a8), color-stop(1, #2cc46c));
-  background: -ms-linear-gradient(bottom, #7ee2a8, #2cc46c);
-  background: -moz-linear-gradient(center bottom, #7ee2a8 0%, #2cc46c 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2cc46c), color-stop(1, #7ee2a8));
+  background: -ms-linear-gradient(bottom, #2cc46c, #7ee2a8);
+  background: -moz-linear-gradient(center bottom, #2cc46c 0%, #7ee2a8 100%);
   background: -o-linear-gradient(#2cc46c, #7ee2a8);
-  background-image: linear-gradient(to bottom, #7ee2a8, #2cc46c);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#7ee2a8', EndColorStr='#2cc46c');
+  background-image: linear-gradient(top, #2cc46c, #7ee2a8);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2cc46c', EndColorStr='#7ee2a8');
   color: #fff;
   border: 1px solid #2ecc71;
 }
@@ -1960,7 +1384,7 @@ a:hover.btn-default-gradient {
   background: -ms-linear-gradient(bottom, #2ecc71, #2ecc71);
   background: -moz-linear-gradient(center bottom, #2ecc71 0%, #2ecc71 100%);
   background: -o-linear-gradient(#2ecc71, #2ecc71);
-  background-image: linear-gradient(to bottom, #2ecc71, #2ecc71);
+  background-image: linear-gradient(top, #2ecc71, #2ecc71);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2ecc71', EndColorStr='#2ecc71');
   border-color: rgba(0, 0, 0, 0.08);
 }

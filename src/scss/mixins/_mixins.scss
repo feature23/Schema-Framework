@@ -384,12 +384,12 @@ $base-px: 16px;
 
 @mixin gradient($color, $stop, $start) {
     background: $color;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $start), color-stop(1, $stop));
-    background: -ms-linear-gradient(bottom, $start, $stop);
-    background: -moz-linear-gradient(center bottom, $start 0%, $stop 100%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $stop), color-stop(1, $start));
+    background: -ms-linear-gradient(bottom, $stop, $start);
+    background: -moz-linear-gradient(center bottom, $stop 0%, $start 100%);
     background: -o-linear-gradient($stop, $start);
-    background-image: linear-gradient(top, $start, $stop);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$start}', EndColorStr='#{$stop}');
+    background-image: linear-gradient(top, $stop, $start);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$stop}', EndColorStr='#{$start}');
 }
 
 

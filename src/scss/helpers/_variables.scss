@@ -97,7 +97,7 @@ $rem-font-size:                         16;
 // baseline-size is the base variable to all 
 // calculations for all the things.
 $baseline-size:                         1rem;                              // 16px 
-
+$base-font-size:                        16px;
 $base-font-size-xl:                     ($base-font-size * 1.50);          // 24px // 1.5rem
 $base-font-size-large:                  ($base-font-size * 1.25);          // 20px // 1.25rem
 $base-font-size:                        1rem;                              // 16px // 1.00rem

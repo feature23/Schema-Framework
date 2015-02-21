@@ -1,0 +1,1 @@
+var gulp=require("gulp"),uglify=require("gulp-uglify"),sass=require("gulp-ruby-sass");gulp.task("styles",function(){return sass("src/scss/**.scss",{style:"compressed"}).pipe(gulp.dest("src/css"))}),gulp.task("watch",function(){gulp.watch("src/scss/**/*.scss",["styles"])}),gulp.task("default",["scripts","styles","watch"]);
