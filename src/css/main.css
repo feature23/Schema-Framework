@@ -654,6 +654,7 @@ span.close {
 .btn-group-lg > .btn,
 .btn-group-sm > .btn,
 .pagination > ul > li > a {
+  margin-right: 0;
   float: left;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;

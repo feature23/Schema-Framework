@@ -39,6 +39,7 @@
 .btn-group-lg > .btn,
 .btn-group-sm > .btn,
 .pagination > ul > li > a {
+  margin-right: 0;
   @include left-float;
   @include border-radius(0);
 } 
