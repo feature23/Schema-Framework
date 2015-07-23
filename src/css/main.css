@@ -1,5 +1,408 @@
 /*------------------------------------*\
 
+    $Normalize CSS
+
+\*------------------------------------*/
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/*------------------------------------*\
+
     $Clearfix
     
 \*------------------------------------*/
@@ -34,7 +437,6 @@ body {
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -44,7 +446,6 @@ a {
   color: #3498db;
   text-decoration: none;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 
@@ -66,7 +467,6 @@ hr {
   border-bottom: none;
   height: 1px;
   margin: 1rem 0;
-  -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -194,14 +594,12 @@ hr {
   display: none;
   opacity: 0;
   -webkit-transition: opacity 0.45s linear;
-  -moz-transition: opacity 0.45s linear;
   transition: opacity 0.45s linear;
 }
 
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.45s linear;
-  -moz-transition: opacity 0.45s linear;
   transition: opacity 0.45s linear;
 }
 
@@ -222,7 +620,7 @@ hr {
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 /* ==========================================================================
@@ -236,7 +634,8 @@ hr {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
-    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
     text-shadow: none !important;
   }
 
@@ -427,10 +826,6 @@ p.lead,
   border: 1px solid transparent;
   display: block;
   padding: 1rem;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
   border-radius: 6px;
 }
 .alert h4, .alert-success h4, .alert-primary h4, .alert-info h4, .alert-warning h4, .alert-danger h4 {
@@ -535,10 +930,6 @@ span.close {
   white-space: nowrap;
   vertical-align: baseline;
   background-color: #777777;
-  -webkit-border-radius: 120px;
-  -moz-border-radius: 120px;
-  -ms-border-radius: 120px;
-  -o-border-radius: 120px;
   border-radius: 120px;
   font-size: 14px;
   font-size: 0.875rem;
@@ -623,10 +1014,6 @@ span.close {
   display: inline-block;
   position: relative;
   vertical-align: middle;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
 }
 
@@ -636,16 +1023,13 @@ span.close {
 
 .pagination > ul > li > a {
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 
 .pagination-gradient > ul > li {
   background: #eeeeee;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(1, #fff));
-  background: -ms-linear-gradient(bottom, #eeeeee, #fff);
-  background: -moz-linear-gradient(center bottom, #eeeeee 0%, #fff 100%);
   background: -o-linear-gradient(#eeeeee, #fff);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#fff));
   background-image: linear-gradient(top, #eeeeee, #fff);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#eeeeee', EndColorStr='#fff');
 }
@@ -654,12 +1038,7 @@ span.close {
 .btn-group-lg > .btn,
 .btn-group-sm > .btn,
 .pagination > ul > li > a {
-  margin-right: 0;
   float: left;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
 }
 
@@ -698,10 +1077,6 @@ span.close {
   padding: 0.875rem 1.5rem;
   float: left;
   display: inline-block;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
 }
 
@@ -711,10 +1086,6 @@ span.close {
   padding: 0.4rem 0.6rem;
   float: left;
   display: inline-block;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
 }
 
@@ -788,7 +1159,6 @@ a:hover.btn-primary-outline,
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
   padding: 0.5rem 0.875rem;
   font-size: 1rem;
@@ -811,10 +1181,6 @@ a:hover.btn-primary-outline,
 }
 
 .btn-pill {
-  -webkit-border-radius: 24px;
-  -moz-border-radius: 24px;
-  -ms-border-radius: 24px;
-  -o-border-radius: 24px;
   border-radius: 24px;
 }
 
@@ -843,7 +1209,6 @@ a:hover.btn-default-gradient {
   background-color: #fff;
   border-color: #cccccc;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
   text-shadow: none;
 }
@@ -858,7 +1223,6 @@ a:hover.btn-default-gradient {
   background-color: #e9e9e9;
   border-color: #b6b6b6;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -869,7 +1233,6 @@ a:hover.btn-default-gradient {
   background-color: transparent;
   border-color: #777777;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
   text-shadow: none;
 }
@@ -884,7 +1247,6 @@ a:hover.btn-default-gradient {
   background-color: transparent;
   border-color: #616161;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -898,17 +1260,14 @@ a:hover.btn-default-gradient {
 .btn-default-outline:active,
 .default-outline:active {
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 }
 
 .btn-default-gradient,
 .default-gradient {
   background: #cccccc;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, whitesmoke), color-stop(1, #fff));
-  background: -ms-linear-gradient(bottom, whitesmoke, #fff);
-  background: -moz-linear-gradient(center bottom, whitesmoke 0%, #fff 100%);
   background: -o-linear-gradient(whitesmoke, #fff);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(top), color-stop(whitesmoke), to(#fff));
   background-image: linear-gradient(top, whitesmoke, #fff);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='whitesmoke', EndColorStr='#fff');
   border: 1px solid #cccccc;
@@ -917,17 +1276,14 @@ a:hover.btn-default-gradient {
 .btn-default-gradient:hover,
 .default-gradient:hover {
   background: #cccccc;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, whitesmoke), color-stop(1, whitesmoke));
-  background: -ms-linear-gradient(bottom, whitesmoke, whitesmoke);
-  background: -moz-linear-gradient(center bottom, whitesmoke 0%, whitesmoke 100%);
   background: -o-linear-gradient(whitesmoke, whitesmoke);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(whitesmoke));
   background-image: linear-gradient(top, whitesmoke, whitesmoke);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='whitesmoke', EndColorStr='whitesmoke');
 }
 .btn-default-gradient:active,
 .default-gradient:active {
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -937,7 +1293,6 @@ a:hover.btn-default-gradient {
   background-color: #3498db;
   border-color: #2386c8;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .btn-primary:hover,
@@ -951,7 +1306,6 @@ a:hover.btn-default-gradient {
   background-color: #2282c1;
   border-color: #1d6da3;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -962,7 +1316,6 @@ a:hover.btn-default-gradient {
   background-color: transparent;
   border-color: #3498db;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
   text-shadow: none;
 }
@@ -977,7 +1330,6 @@ a:hover.btn-default-gradient {
   background-color: transparent;
   border-color: #2282c1;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -990,17 +1342,14 @@ a:hover.btn-default-gradient {
 .btn-primary-outline:active,
 .primary-outline:active {
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary-gradient,
 .primary-gradient {
   background: #3498db;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2b94d9), color-stop(1, #8bc4ea));
-  background: -ms-linear-gradient(bottom, #2b94d9, #8bc4ea);
-  background: -moz-linear-gradient(center bottom, #2b94d9 0%, #8bc4ea 100%);
   background: -o-linear-gradient(#2b94d9, #8bc4ea);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(top), color-stop(#2b94d9), to(#8bc4ea));
   background-image: linear-gradient(top, #2b94d9, #8bc4ea);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2b94d9', EndColorStr='#8bc4ea');
   color: #fff;
@@ -1009,10 +1358,8 @@ a:hover.btn-default-gradient {
 .btn-primary-gradient:hover,
 .primary-gradient:hover {
   background: #3498db;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3498db), color-stop(1, #3498db));
-  background: -ms-linear-gradient(bottom, #3498db, #3498db);
-  background: -moz-linear-gradient(center bottom, #3498db 0%, #3498db 100%);
   background: -o-linear-gradient(#3498db, #3498db);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3498db), to(#3498db));
   background-image: linear-gradient(top, #3498db, #3498db);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#3498db', EndColorStr='#3498db');
   border-color: rgba(0, 0, 0, 0.08);
@@ -1020,7 +1367,6 @@ a:hover.btn-default-gradient {
 .btn-primary-gradient:active,
 .primary-gradient:active {
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -1030,7 +1376,6 @@ a:hover.btn-default-gradient {
   background-color: #e74c3c;
   border-color: #e32f1c;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .btn-danger:hover,
@@ -1044,7 +1389,6 @@ a:hover.btn-default-gradient {
   background-color: #dd2d1b;
   border-color: #bd2717;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1055,7 +1399,6 @@ a:hover.btn-default-gradient {
   background-color: transparent;
   border-color: #e74c3c;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
   text-shadow: none;
 }
@@ -1070,7 +1413,6 @@ a:hover.btn-default-gradient {
   background-color: transparent;
   border-color: #dd2d1b;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1083,17 +1425,14 @@ a:hover.btn-default-gradient {
 .btn-danger-outline:active,
 .danger-outline:active {
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 }
 
 .btn-danger-gradient,
 .danger-gradient {
   background: #e74c3c;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e64433), color-stop(1, #f29f97));
-  background: -ms-linear-gradient(bottom, #e64433, #f29f97);
-  background: -moz-linear-gradient(center bottom, #e64433 0%, #f29f97 100%);
   background: -o-linear-gradient(#e64433, #f29f97);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(top), color-stop(#e64433), to(#f29f97));
   background-image: linear-gradient(top, #e64433, #f29f97);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#e64433', EndColorStr='#f29f97');
   color: #fff;
@@ -1102,10 +1441,8 @@ a:hover.btn-default-gradient {
 .btn-danger-gradient:hover,
 .danger-gradient:hover {
   background: #e74c3c;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e74c3c), color-stop(1, #e74c3c));
-  background: -ms-linear-gradient(bottom, #e74c3c, #e74c3c);
-  background: -moz-linear-gradient(center bottom, #e74c3c 0%, #e74c3c 100%);
   background: -o-linear-gradient(#e74c3c, #e74c3c);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e74c3c), to(#e74c3c));
   background-image: linear-gradient(top, #e74c3c, #e74c3c);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#e74c3c', EndColorStr='#e74c3c');
   border-color: rgba(0, 0, 0, 0.08);
@@ -1113,7 +1450,6 @@ a:hover.btn-default-gradient {
 .btn-danger-gradient:active,
 .danger-gradient:active {
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -1123,7 +1459,6 @@ a:hover.btn-default-gradient {
   background-color: #24cabc;
   border-color: #1faca0;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .btn-info:hover,
@@ -1137,7 +1472,6 @@ a:hover.btn-default-gradient {
   background-color: #1da59a;
   border-color: #18877e;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1148,7 +1482,6 @@ a:hover.btn-default-gradient {
   background-color: transparent;
   border-color: #24cabc;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
   text-shadow: none;
 }
@@ -1163,7 +1496,6 @@ a:hover.btn-default-gradient {
   background-color: transparent;
   border-color: #1da59a;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1176,17 +1508,14 @@ a:hover.btn-default-gradient {
 .btn-info-outline:active,
 .info-outline:active {
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 }
 
 .btn-info-gradient,
 .info-gradient {
   background: #24cabc;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #22c1b4), color-stop(1, #6fe5db));
-  background: -ms-linear-gradient(bottom, #22c1b4, #6fe5db);
-  background: -moz-linear-gradient(center bottom, #22c1b4 0%, #6fe5db 100%);
   background: -o-linear-gradient(#22c1b4, #6fe5db);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(top), color-stop(#22c1b4), to(#6fe5db));
   background-image: linear-gradient(top, #22c1b4, #6fe5db);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#22c1b4', EndColorStr='#6fe5db');
   color: #fff;
@@ -1195,10 +1524,8 @@ a:hover.btn-default-gradient {
 .btn-info-gradient:hover,
 .info-gradient:hover {
   background: #24cabc;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #24cabc), color-stop(1, #24cabc));
-  background: -ms-linear-gradient(bottom, #24cabc, #24cabc);
-  background: -moz-linear-gradient(center bottom, #24cabc 0%, #24cabc 100%);
   background: -o-linear-gradient(#24cabc, #24cabc);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#24cabc), to(#24cabc));
   background-image: linear-gradient(top, #24cabc, #24cabc);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#24cabc', EndColorStr='#24cabc');
   border-color: rgba(0, 0, 0, 0.08);
@@ -1206,7 +1533,6 @@ a:hover.btn-default-gradient {
 .btn-info-gradient:active,
 .info-gradient:active {
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -1216,7 +1542,6 @@ a:hover.btn-default-gradient {
   background-color: #f39c12;
   border-color: #d6880b;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .btn-warning:hover,
@@ -1230,7 +1555,6 @@ a:hover.btn-default-gradient {
   background-color: #cf830a;
   border-color: #ad6e09;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1241,7 +1565,6 @@ a:hover.btn-default-gradient {
   background-color: transparent;
   border-color: #f39c12;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
   text-shadow: none;
 }
@@ -1256,7 +1579,6 @@ a:hover.btn-default-gradient {
   background-color: transparent;
   border-color: #cf830a;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1269,17 +1591,14 @@ a:hover.btn-default-gradient {
 .btn-warning-outline:active,
 .warning-outline:active {
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 }
 
 .btn-warning-gradient,
 .warning-gradient {
   background: #f39c12;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ef970c), color-stop(1, #f8c573));
-  background: -ms-linear-gradient(bottom, #ef970c, #f8c573);
-  background: -moz-linear-gradient(center bottom, #ef970c 0%, #f8c573 100%);
   background: -o-linear-gradient(#ef970c, #f8c573);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(top), color-stop(#ef970c), to(#f8c573));
   background-image: linear-gradient(top, #ef970c, #f8c573);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ef970c', EndColorStr='#f8c573');
   color: #fff;
@@ -1288,10 +1607,8 @@ a:hover.btn-default-gradient {
 .btn-warning-gradient:hover,
 .warning-gradient:hover {
   background: #f39c12;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f39c12), color-stop(1, #f39c12));
-  background: -ms-linear-gradient(bottom, #f39c12, #f39c12);
-  background: -moz-linear-gradient(center bottom, #f39c12 0%, #f39c12 100%);
   background: -o-linear-gradient(#f39c12, #f39c12);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f39c12), to(#f39c12));
   background-image: linear-gradient(top, #f39c12, #f39c12);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f39c12', EndColorStr='#f39c12');
   border-color: rgba(0, 0, 0, 0.08);
@@ -1299,7 +1616,6 @@ a:hover.btn-default-gradient {
 .btn-warning-gradient:active,
 .warning-gradient:active {
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -1309,7 +1625,6 @@ a:hover.btn-default-gradient {
   background-color: #2ecc71;
   border-color: #27af61;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .btn-success:hover,
@@ -1323,7 +1638,6 @@ a:hover.btn-default-gradient {
   background-color: #26a95d;
   border-color: #1f8b4d;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1334,7 +1648,6 @@ a:hover.btn-default-gradient {
   background-color: transparent;
   border-color: #2ecc71;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
   text-shadow: none;
 }
@@ -1349,7 +1662,6 @@ a:hover.btn-default-gradient {
   background-color: transparent;
   border-color: #26a95d;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1362,17 +1674,14 @@ a:hover.btn-default-gradient {
 .btn-success-outline:active,
 .success-outline:active {
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 }
 
 .btn-success-gradient,
 .success-gradient {
   background: #2ecc71;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2cc46c), color-stop(1, #7ee2a8));
-  background: -ms-linear-gradient(bottom, #2cc46c, #7ee2a8);
-  background: -moz-linear-gradient(center bottom, #2cc46c 0%, #7ee2a8 100%);
   background: -o-linear-gradient(#2cc46c, #7ee2a8);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(top), color-stop(#2cc46c), to(#7ee2a8));
   background-image: linear-gradient(top, #2cc46c, #7ee2a8);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2cc46c', EndColorStr='#7ee2a8');
   color: #fff;
@@ -1381,10 +1690,8 @@ a:hover.btn-default-gradient {
 .btn-success-gradient:hover,
 .success-gradient:hover {
   background: #2ecc71;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #2ecc71), color-stop(1, #2ecc71));
-  background: -ms-linear-gradient(bottom, #2ecc71, #2ecc71);
-  background: -moz-linear-gradient(center bottom, #2ecc71 0%, #2ecc71 100%);
   background: -o-linear-gradient(#2ecc71, #2ecc71);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2ecc71), to(#2ecc71));
   background-image: linear-gradient(top, #2ecc71, #2ecc71);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#2ecc71', EndColorStr='#2ecc71');
   border-color: rgba(0, 0, 0, 0.08);
@@ -1392,7 +1699,6 @@ a:hover.btn-default-gradient {
 .btn-success-gradient:active,
 .success-gradient:active {
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -1407,8 +1713,6 @@ a:hover.btn-default-gradient {
 .dropdown li,
 .dropdown div::after {
   -webkit-transition: all 150ms ease-in-out;
-  -moz-transition: all 150ms ease-in-out;
-  -ms-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
 
@@ -1431,11 +1735,8 @@ a:hover.btn-default-gradient {
   color: #777777;
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
+  -ms-user-select: none;
+      user-select: none;
   border-radius: 6px;
 }
 
@@ -1445,13 +1746,11 @@ a:hover.btn-default-gradient {
 
 .dropdown:hover {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
 .dropdown.focus {
   -webkit-box-shadow: 0 0 5px rgba(51, 102, 248, 0.4);
-  -moz-box-shadow: 0 0 5px rgba(51, 102, 248, 0.4);
   box-shadow: 0 0 5px rgba(51, 102, 248, 0.4);
 }
 
@@ -1611,10 +1910,6 @@ a:hover.btn-default-gradient {
   font-size: 0.75rem;
   margin: 8px 0;
   margin: 0.5rem 0;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
 }
 
@@ -1715,10 +2010,6 @@ nav a {
   color: #777777;
   padding: 0.5rem 0.875rem;
   display: inline-block;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
   border-radius: 6px;
 }
 nav a:hover {
@@ -1745,7 +2036,6 @@ nav a:hover {
   background-color: transparent;
   border-color: #777777;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .nav > a.btn--default-outline:hover,
@@ -1759,7 +2049,6 @@ nav a:hover {
   background-color: transparent;
   border-color: #616161;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1772,7 +2061,6 @@ nav a:hover {
 .nav > a.btn--default-outline:active,
 .nav > a.default-outline:active {
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 
@@ -1782,7 +2070,6 @@ nav a:hover {
   background-color: transparent;
   border-color: #3498db;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .nav > li > a.btn--primary-outline:hover,
@@ -1796,7 +2083,6 @@ nav a:hover {
   background-color: transparent;
   border-color: #2282c1;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1809,7 +2095,6 @@ nav a:hover {
 .nav > li > a.btn--primary-outline:active,
 .nav > li > a.primary-outline:active {
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 
@@ -1819,7 +2104,6 @@ nav a:hover {
   background-color: transparent;
   border-color: #e74c3c;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .nav > li > a.btn--danger-outline:hover,
@@ -1833,7 +2117,6 @@ nav a:hover {
   background-color: transparent;
   border-color: #dd2d1b;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1846,7 +2129,6 @@ nav a:hover {
 .nav > li > a.btn--danger-outline:active,
 .nav > li > a.danger-outline:active {
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 
@@ -1856,7 +2138,6 @@ nav a:hover {
   background-color: transparent;
   border-color: #24cabc;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .nav > li > a.btn--info-outline:hover,
@@ -1870,7 +2151,6 @@ nav a:hover {
   background-color: transparent;
   border-color: #1da59a;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1883,7 +2163,6 @@ nav a:hover {
 .nav > li > a.btn--info-outline:active,
 .nav > li > a.info-outline:active {
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 
@@ -1893,7 +2172,6 @@ nav a:hover {
   background-color: transparent;
   border-color: #f39c12;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .nav > li > a.btn--warning-outline:hover,
@@ -1907,7 +2185,6 @@ nav a:hover {
   background-color: transparent;
   border-color: #cf830a;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1920,7 +2197,6 @@ nav a:hover {
 .nav > li > a.btn--warning-outline:active,
 .nav > li > a.warning-outline:active {
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 
@@ -1930,7 +2206,6 @@ nav a:hover {
   background-color: transparent;
   border-color: #2ecc71;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .nav > li > a.btn--success-outline:hover,
@@ -1944,7 +2219,6 @@ nav a:hover {
   background-color: transparent;
   border-color: #26a95d;
   -webkit-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
@@ -1957,7 +2231,6 @@ nav a:hover {
 .nav > li > a.btn--success-outline:active,
 .nav > li > a.success-outline:active {
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 
@@ -1981,10 +2254,6 @@ nav a:hover {
   position: relative;
   padding: 0.5rem 0.875rem;
   float: left;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
   border-radius: 6px;
 }
 
@@ -2011,10 +2280,8 @@ nav a:hover {
 .pill-nav > li > a.active:active {
   outline: 0;
   -webkit-box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.25);
   box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.25);
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 
@@ -2026,13 +2293,8 @@ nav a:hover {
 .panel {
   border: 1px solid transparent;
   background-color: #fff;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
   border-radius: 6px;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -2137,7 +2399,6 @@ nav a:hover {
   border-collapse: collapse;
   display: table;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 
@@ -2185,7 +2446,8 @@ nav a:hover {
 
 .table-bordered > thead > tr > th {
   background-color: #f9f9f9;
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.92);
+  -webkit-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.92);
+          box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.92);
 }
 
 .table > thead > tr > th {
@@ -2220,7 +2482,6 @@ nav a:hover {
 .table-hover > tfoot > tr > td:hover {
   background-color: #f9f9f9;
   -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 
@@ -2302,7 +2563,6 @@ label {
 
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -2398,15 +2658,9 @@ input[type="checkbox"] {
   padding: 0.5rem 0.875rem;
   border: 1px solid #cccccc;
   outline: 0;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
   border-radius: 6px;
   -webkit-appearance: none;
-  -webkit-transition: border linear 0.25s, box-shadow linear 0.25s;
-  -moz-transition: border linear 0.25s, box-shadow linear 0.25s;
-  -o-transition: border linear 0.25s, box-shadow linear 0.25s;
+  -webkit-transition: border linear 0.25s, -webkit-box-shadow linear 0.25s;
   transition: border linear 0.25s, box-shadow linear 0.25s;
 }
 
@@ -2471,10 +2725,6 @@ input[type="checkbox"] {
 .form-element-lg > .form-group-btn:last-child > .btn.btn-pill
 .form-element-group-lg > .form-group-btn:first-child > .btn.btn-pill,
 .form-element-group-lg > .form-group-btn:last-child > .btn.btn-pill {
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
   border-radius: 60px;
 }
 
@@ -2507,7 +2757,6 @@ input[type="checkbox"] {
   outline: thin dotted \9;
   border-color: #24cabc;
   -webkit-box-shadow: 0 0 8px rgba(36, 202, 188, 0.6);
-  -moz-box-shadow: 0 0 8px rgba(36, 202, 188, 0.6);
   box-shadow: 0 0 8px rgba(36, 202, 188, 0.6);
 }
 
@@ -3110,7 +3359,6 @@ input[type="checkbox"] {
     min-height: 30px;
     margin-left: 2.76%;
     *margin-left: 2.70%;
-    -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -3297,7 +3545,6 @@ input[type="checkbox"] {
   width: 100%;
   min-height: 30px;
   margin-left: 2.12%;
-  -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -3467,7 +3714,6 @@ input[type="checkbox"] {
     float: none;
     width: 100%;
     margin-left: 0;
-    -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;

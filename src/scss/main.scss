@@ -3,7 +3,7 @@
 //    $Base
 //
 //------------------------------------
-//@import 'base/_normalize.scss';
+@import 'base/_normalize.scss';
 @import 'base/_clearfix.scss';
 
 
@@ -43,16 +43,16 @@
 //    $Components
 //   
 //------------------------------------
-@import 'components/_alerts.scss';
-@import 'components/_badges.scss';
-@import 'components/_btngroup-pagination.scss';
-@import 'components/_buttons.scss';
-@import 'components/_dropdowns.scss';
-@import 'components/_labels.scss';
-@import 'components/_listgroup.scss';
-@import 'components/_navigation.scss';
-@import 'components/_panel.scss';
-@import 'components/_tables.scss';
+@import 'components/alerts/alerts';
+@import 'components/badges/badges';
+@import 'components/button-groups/btngroup-pagination';
+@import 'components/buttons/buttons';
+@import 'components/dropdowns/dropdowns';
+@import 'components/labels/labels';
+@import 'components/list-groups/listgroup';
+@import 'components/navigation/navigation';
+@import 'components/panels/panel';
+@import 'components/tables/tables';
 
 @import 'helpers/_state.scss';
 
