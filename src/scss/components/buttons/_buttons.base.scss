@@ -1,0 +1,119 @@
+@import "buttons.variables";
+/*------------------------------------*\
+
+    $Buttons
+
+\*------------------------------------*/
+
+/*------------------------------------*\
+    $Button Base
+\*------------------------------------*/
+/**
+ * Base button styles.
+ * 1. "display: inline-block;" for better design style for box model properties.
+ * 2. "vertical-align: middle;" lines up different size buttons.
+ * 3. "white-space: nowrap;" keeps buttons from wrapping.
+ * 4. "font-family: inherit;" makes buttons inherit font style.
+ * 5. "cursor: pointer;" makes all elements using .btn appear clickable.
+ * 6. "border: 1px solid transparent;" gives the button a transparent shell to be styled by button modifiers.
+ * 7. "font-weight: $btn-font-weight; is a font weight of 400."
+ * 8. "line-height: inherit;" makes buttons inherit line height."
+ * 9. "color: $base-color-777;" base color for buttons #777."
+ * 10. "text-decoration: none;" because it just looks ugly.
+ * 11. "text-shadow" for a minor shadow under the button text.
+ * 12. "@include transition" is a transition on the button hover
+ * 13. "@include button-size" is the building blocks of the button
+        like padding, font-size, line-height, and border-radius.
+ */
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-family: $primary-font;
+    font-size: inherit;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: $btn-font-weight;
+    line-height: inherit;
+    color: $base-color-777;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .18);
+    @include transition(all .25s ease);
+    @include button-size(
+        $btn-vertical-padding,
+        $btn-horizontal-padding,
+        $btn-font-size,
+        $btn-line-height,
+        $btn-radius
+    );
+}
+
+/**
+ * Removes border and inherits styling from .btn class
+ */
+button {
+    border: none;
+}
+
+/**
+ * Adding this class will help
+ * a button look like a link
+ */
+
+.btn-link {
+    background: transparent;
+    background-color: transparent;
+    border-color: transparent;
+    color: inherit;
+    text-shadow: none;
+}
+
+/**
+ * Adding this class will
+ * achieve a pill style button
+ */
+.btn-pill {
+    @include border-radius($border-radius * 4);
+}
+
+/**
+ * Sets the font awesome icon before text in a .btn class
+ */
+.btn .fa:before {
+    @include rem(margin-right, 8px);
+}
+
+
+
+
+/*------------------------------------*\
+    $Buttons Sizes
+\*------------------------------------*/
+/**
+ * Button Size Modifiers.
+ */
+
+.btn-lg {
+    @include button-size(
+        $btn-vertical-padding-lg,
+        $btn-horizontal-padding-lg,
+        $btn-font-size-lg,
+        $btn-line-height-lg,
+        $btn-radius
+    );
+}
+
+.btn-sm {
+    @include button-size(
+        $btn-vertical-padding-sm,
+        $btn-horizontal-padding-sm,
+        $btn-font-size-sm,
+        $btn-line-height-sm,
+        $btn-radius
+    );
+}
+
+.btn-full {
+    display: block;
+    width: 100%;
+}

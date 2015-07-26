@@ -72,39 +72,6 @@ $base-px: 16px;
 
 
 
-// =============================================================
-//     
-//  A button builder
-//  Create different buttons with color,
-//  background color, and border color.
-//  
-// =============================================================
-
-@mixin button-version ($color, $background, $border) {
-  color: $color;
-  background-color: $background;
-  border-color: $border;
-  @include transition(all .25s ease);
-  
-  &:hover {
-    background-color: darken($background, 5%);
-    border-color: darken($border, 5%);
-  }
-  &:active {
-    color: $color;
-    background-color: darken($background, 8.5%);
-    border-color: darken($border, 8.5%);
-    @include box-shadow(inset 0px 2px 4px 1px rgba(0,0,0,.15));
-    outline: 0;
-  }
-}
-
-@mixin button-size($button-padding-vertical, $button-padding-horizontal, $button-font-size, $button-line-height, $button-border-radius) {
-  padding: $button-padding-vertical $button-padding-horizontal;
-  font-size: $button-font-size;
-  line-height: $button-line-height;
-  border-radius: $button-border-radius;
-}
 
 
 
@@ -382,14 +349,24 @@ $base-px: 16px;
 //  
 // =============================================================
 
+//@mixin gradient($color, $stop, $start) {
+//    background: $color;
+//    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $stop), color-stop(1, $start));
+//    background: -ms-linear-gradient(bottom, $stop, $start);
+//    background: -moz-linear-gradient(center bottom, $stop 0%, $start 100%);
+//    background: -o-linear-gradient($stop, $start);
+//    background-image: linear-gradient(top, $stop, $start);
+//    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$stop}', EndColorStr='#{$start}');
+//}
+
 @mixin gradient($color, $stop, $start) {
-    background: $color;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $stop), color-stop(1, $start));
-    background: -ms-linear-gradient(bottom, $stop, $start);
-    background: -moz-linear-gradient(center bottom, $stop 0%, $start 100%);
-    background: -o-linear-gradient($stop, $start);
-    background-image: linear-gradient(top, $stop, $start);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$stop}', EndColorStr='#{$start}');
+  background: $color;
+  background: -webkit-gradient(to top, color-stop(0, $stop), color-stop(1, $start));
+  background: -ms-linear-gradient(to top, $stop, $start);
+  background: -moz-linear-gradient(to top, $stop 0%, $start 100%);
+  background: -o-linear-gradient(to top, $stop, $start);
+  background-image: linear-gradient(to top, $stop, $start);
+  //filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$stop}', EndColorStr='#{$start}');
 }
 
 

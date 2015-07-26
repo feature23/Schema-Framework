@@ -140,22 +140,18 @@ $blockquote-border-color:               $base-color;
 //  
 // ============================================================= 
 
-// Font sizes
-$btn-font-size:                         $baseline-size;
-//$btn-font-size-lg:                      ($baseline-size * $base-font-size-large);
-$btn-font-size-lg:                      $base-font-size-large;
-$btn-font-size-sm:                      ($baseline-size * 0.875);   
+
 
 // Line height
 $line-height-lg:                        ($base-line-height * 1.3);  
 $line-height-sm:                        $baseline-size;                                 
 
 // Padding                                        
-$base-padding-vertical:                 ($baseline-size / 2); 
+$base-padding-vertical:                 ($baseline-size / 2);
 $base-padding-horizontal:               ($baseline-size * 0.875);
 
-$base-padding-lg-vertical:              ($baseline-size * 0.875);
-$base-padding-lg-horizontal:            ($baseline-size * 1.5);
+$base-padding-lg-vertical:              ($baseline-size * 0.5);
+$base-padding-lg-horizontal:            ($baseline-size * 1);
 
 $base-padding-sm-vertical:              ($baseline-size * 0.4);
 $base-padding-sm-horizontal:            ($baseline-size * 0.6);
@@ -163,73 +159,7 @@ $base-padding-sm-horizontal:            ($baseline-size * 0.6);
 
 
 
-// =============================================================
-//     
-//  $Buttons
-//  
-// =============================================================
 
-$btn-font-weight:                       $font-family-weight;
-                                                                               
-// Default //                                                            
-$btn-default-color:                     $base-color-777;
-$btn-default-bg:                        $base-bg;
-$btn-default-border:                    $base-color-ccc; 
-
-    // Default-outline //
-    $btn-default-color-outline:         $base-color-777;
-    $btn-default-bg-outline:            transparent;
-    $btn-default-border-outline:        $base-color-777;                                     
-                                        
-// Primary                              
-$btn-primary-color:                     $base-bg;
-$btn-primary-bg:                        $primary-color;
-$btn-primary-border:                    darken($primary-color, 7%);
-
-    // Primary-outline //
-    $btn-primary-color-outline:         $primary-color;
-    $btn-primary-bg-outline:            transparent;
-    $btn-primary-border-outline:        $primary-color;
-                                        
-// Danger                               
-$btn-danger-color:                      $base-bg;
-$btn-danger-bg:                         $danger-color;
-$btn-danger-border:                     darken($danger-color, 7%);
-
-    // Danger-outline //
-    $btn-danger-color-outline:         $danger-color;
-    $btn-danger-bg-outline:            transparent;
-    $btn-danger-border-outline:        $danger-color;
-                                        
-// Info                                 
-$btn-info-color:                        $base-bg;
-$btn-info-bg:                           $info-color;
-$btn-info-border:                       darken($info-color, 7%);;
-
-    // Info-outline //
-    $btn-info-color-outline:           $info-color;
-    $btn-info-bg-outline:              transparent;
-    $btn-info-border-outline:          $info-color;
-                                        
-// Warning                              
-$btn-warning-color:                     $base-bg;
-$btn-warning-bg:                        $warning-color;
-$btn-warning-border:                    darken($warning-color, 7%);
-
-    // Warning-outline //
-    $btn-warning-color-outline:         $warning-color;
-    $btn-warning-bg-outline:            transparent;
-    $btn-warning-border-outline:        $warning-color;
-                                        
-// Success                              
-$btn-success-color:                     $base-bg;
-$btn-success-bg:                        $success-color;
-$btn-success-border:                    darken($success-color, 7%);
-
-    // Success-outline //
-    $btn-success-color-outline:         $success-color;
-    $btn-success-bg-outline:            transparent;
-    $btn-success-border-outline:        $success-color;
 
 
 
