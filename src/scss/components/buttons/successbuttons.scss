@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    $Success Button Styles
+\*------------------------------------*/
+
+/* Success Button
+==========================================================================*/
+.btn--success,
+.nav > li > a.btn--success {
+    @include button-version(
+        $btn-success-color,
+        $btn-success-bg,
+        $btn-success-border
+    );
+}
+
+
+
+
+/* Success Button Outline
+==========================================================================*/
+.btn--success--outline,
+.success--outline {
+    @include button-version(
+        $btn-success-color-outline,
+        $btn-success-bg-outline,
+        $btn-success-border-outline
+    );
+    text-shadow: none;
+
+    &:hover {
+        border-color: rgba(0, 0, 0, .08);
+        color: $base-white;
+        background-color: $success-color;
+    }
+    &:active {
+        @include box-shadow(
+            inset 0px 2px 4px 1px rgba(0,0,0,.15)
+        );
+    }
+}
+
+
+
+
+
+/* Success Button Gradient
+==========================================================================*/
+.btn--success--gradient,
+.success--gradient {
+    @include gradient(
+        $success-color,
+        darken($success-color, 6%),
+        lighten($success-color, 15%)
+    );
+    color: $base-white;
+    border: 1px solid darken($success-color, 12%);
+    box-shadow: inset 0 1px 0px rgba(255, 255, 255, .65);
+
+    &:hover {
+        @include gradient(
+            $success-color,
+            $success-color,
+            $success-color
+        );
+        border-color: rgba(0, 0, 0, .08);
+    }
+    &:active {
+        @include box-shadow(
+            inset 0px 2px 4px 1px rgba(0,0,0,.15)
+        );
+    }
+}

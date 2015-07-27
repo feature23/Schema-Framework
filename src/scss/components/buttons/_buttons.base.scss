@@ -1,12 +1,12 @@
 @import "buttons.variables";
 /*------------------------------------*\
 
-    $Buttons
+    $Buttons Component
 
 \*------------------------------------*/
 
 /*------------------------------------*\
-    $Button Base
+    $Button Base Shell
 \*------------------------------------*/
 /**
  * Base button styles.
@@ -56,11 +56,11 @@ button {
 }
 
 /**
- * Adding this class will help
+ * Adding this class will make
  * a button look like a link
  */
 
-.btn-link {
+.btn--link {
     background: transparent;
     background-color: transparent;
     border-color: transparent;
@@ -72,7 +72,7 @@ button {
  * Adding this class will
  * achieve a pill style button
  */
-.btn-pill {
+.btn--pill {
     @include border-radius($border-radius * 4);
 }
 
@@ -81,6 +81,44 @@ button {
  */
 .btn .fa:before {
     @include rem(margin-right, 8px);
+}
+
+/**
+ * These are anchor items who
+ * have a white color with no text decoration.
+ */
+a.btn--success,
+a.btn--warning,
+a.btn--info,
+a.btn--danger,
+a.btn--primary,
+a:hover.btn--success,
+a:hover.btn--warning,
+a:hover.btn--info,
+a:hover.btn--danger,
+a:hover.btn--primary,
+a:hover.btn--success--gradient,
+a:hover.btn--primary--gradient,
+a:hover.btn--info--gradient,
+a:hover.btn--danger--gradient,
+a:hover.btn--warning--gradient,
+a.btn--warning--outline:hover,
+a.btn--info--outline:hover,
+a.btn--primary--outline:hover,
+a.btn--success--outline:hover,
+a.btn--danger--outline:hover,
+a:hover.btn--success--outline,
+a:hover.btn--info--outline,
+a:hover.btn--warning--outline,
+a:hover.btn--primary--outline,
+.nav > li > a:hover.btn--default--outline,
+.nav > li > a:hover.btn--primary--outline,
+.nav > li > a:hover.btn--info--outline,
+.nav > li > a:hover.btn--success--outline,
+.nav > li > a:hover.btn--warning--outline,
+.nav > li > a:hover.btn--danger--outline {
+    text-decoration: none;
+    color: $base-bg;
 }
 
 
@@ -93,7 +131,7 @@ button {
  * Button Size Modifiers.
  */
 
-.btn-lg {
+.btn--lg {
     @include button-size(
         $btn-vertical-padding-lg,
         $btn-horizontal-padding-lg,
@@ -103,7 +141,7 @@ button {
     );
 }
 
-.btn-sm {
+.btn--sm {
     @include button-size(
         $btn-vertical-padding-sm,
         $btn-horizontal-padding-sm,
@@ -113,7 +151,7 @@ button {
     );
 }
 
-.btn-full {
+.btn--full {
     display: block;
     width: 100%;
 }

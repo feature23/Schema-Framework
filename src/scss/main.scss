@@ -46,8 +46,20 @@
 @import 'components/alerts/alerts';
 @import 'components/badges/badges';
 @import 'components/button-groups/btngroup-pagination';
-//@import "components/buttons/_button.base.scss";
-@import 'components/buttons/buttons';
+
+// Buttons Component
+//==========================================================================
+@import 'components/buttons/_buttons.variables.scss';
+@import 'components/buttons/_buttons.base.scss';
+@import "components/buttons/defaultbuttons.scss";
+@import "components/buttons/primarybuttons.scss";
+@import "components/buttons/dangerbuttons.scss";
+@import "components/buttons/infobuttons.scss";
+@import "components/buttons/warningbuttons.scss";
+@import "components/buttons/successbuttons.scss";
+
+
+
 @import 'components/dropdowns/dropdowns';
 @import 'components/labels/labels';
 @import 'components/list-groups/listgroup';

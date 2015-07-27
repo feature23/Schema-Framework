@@ -64,11 +64,16 @@ $btn-vertical-padding-sm:               $base-padding-sm-vertical;
     }
 }
 
-@mixin button-size($button-padding-vertical, $button-padding-horizontal, $button-font-size, $button-line-height, $button-radius) {
-    padding: $button-padding-vertical $button-padding-horizontal;
-    font-size: $button-font-size;
-    line-height: $button-line-height;
-    border-radius: $button-radius;
+@mixin button-size(
+    $button-padding-vertical,
+    $button-padding-horizontal,
+    $button-font-size,
+    $button-line-height,
+    $button-radius) {
+        padding: $button-padding-vertical $button-padding-horizontal;
+        font-size: $button-font-size;
+        line-height: $button-line-height;
+        border-radius: $button-radius;
 }
 
 

@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    $Primary Button Styles
+\*------------------------------------*/
+
+/* Primary Button
+==========================================================================*/
+/**
+ * Styles the button when .btn is
+ * attached to an anchor + when
+ */
+.btn--primary,
+.nav > li > a.btn--primary {
+    @include button-version(
+        $btn-primary-color,
+        $btn-primary-bg,
+        $btn-primary-border
+    );
+}
+
+
+
+
+/* Primary Button Outline
+==========================================================================*/
+.btn--primary--outline,
+.primary--outline {
+    @include button-version(
+        $btn-primary-color-outline,
+        $btn-primary-bg-outline,
+        $btn-primary-border-outline
+    );
+    text-shadow: none;
+
+    &:hover {
+        border-color: rgba(0, 0, 0, .08);
+        color: $base-white;
+        background-color: $primary-color;
+
+    }
+    &:active {
+        @include box-shadow(
+            inset 0px 2px 4px 1px rgba(0,0,0,.15)
+        );
+    }
+}
+
+
+
+
+
+/* Primary Button Gradient
+==========================================================================*/
+.btn--primary--gradient,
+.primary--gradient {
+    @include gradient(
+        $primary-color,
+        darken($primary-color, 6%),
+        lighten($primary-color, 15%)
+    );
+    color: $base-white;
+    border: 1px solid darken($primary-color, 12%);
+    box-shadow: inset 0 1px 0px rgba(255, 255, 255, .65);
+
+    &:hover {
+        @include gradient(
+            $primary-color,
+            $primary-color,
+            $primary-color
+        );
+        border-color: rgba(0, 0, 0, .08);
+    }
+    &:active {
+        @include box-shadow(
+            inset 0px 2px 4px 1px rgba(0,0,0,.15)
+        );
+    }
+}

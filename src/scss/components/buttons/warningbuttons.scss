@@ -1,0 +1,73 @@
+/*------------------------------------*\
+    $Warning Button Styles
+\*------------------------------------*/
+
+/* Warning Button
+==========================================================================*/
+.btn--warning,
+.nav > li > a.btn--warning {
+    @include button-version(
+        $btn-warning-color,
+        $btn-warning-bg,
+        $btn-warning-border
+    );
+}
+
+
+
+
+/* Warning Button Outline
+==========================================================================*/
+.btn--warning--outline,
+.warning--outline {
+    @include button-version(
+        $btn-warning-color-outline,
+        $btn-warning-bg-outline,
+        $btn-warning-border-outline
+    );
+    text-shadow: none;
+
+    &:hover {
+        border-color: rgba(0, 0, 0, .08);
+        color: $base-white;
+        background-color: $warning-color;
+    }
+    &:active {
+        @include box-shadow(
+            inset 0px 2px 4px 1px rgba(0,0,0,.15)
+        );
+    }
+}
+
+
+
+
+
+/* Warning Button Gradient
+==========================================================================*/
+.btn--warning--gradient,
+.warning--gradient {
+    @include gradient(
+        $warning-color,
+        darken($warning-color, 6%),
+        lighten($warning-color, 15%)
+    );
+    color: $base-white;
+    border: 1px solid darken($warning-color, 12%);
+    box-shadow: inset 0 1px 0px rgba(255, 255, 255, .65);
+
+
+    &:hover {
+        @include gradient(
+            $warning-color,
+            $warning-color,
+            $warning-color
+        );
+        border-color: rgba(0, 0, 0, .08);
+    }
+    &:active {
+        @include box-shadow(
+            inset 0px 2px 4px 1px rgba(0,0,0,.15)
+        );
+    }
+}
