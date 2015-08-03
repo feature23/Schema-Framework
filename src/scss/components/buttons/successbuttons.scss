@@ -2,6 +2,26 @@
     $Success Button Styles
 \*------------------------------------*/
 
+// Variables
+// =========================================================================*/
+
+// Success
+// (.btn--success) modifier
+$btn-success-color:                     $base-bg;
+$btn-success-bg:                        $success-color;
+$btn-success-border:                    darken($success-color, 12%);
+
+// Success-outline
+// (.btn--success--outline) modifier
+$btn-success-color-outline:             $success-color;
+$btn-success-bg-outline:                transparent;
+$btn-success-border-outline:            $success-color;
+
+
+
+
+
+
 /* Success Button
 ==========================================================================*/
 .btn--success,

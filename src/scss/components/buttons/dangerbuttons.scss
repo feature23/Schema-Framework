@@ -2,6 +2,26 @@
     $Danger Button Styles
 \*------------------------------------*/
 
+// Variables
+// =========================================================================*/
+
+// Danger
+// (.btn--danger) modifier
+$btn-danger-color:                      $base-bg;
+$btn-danger-bg:                         $danger-color;
+$btn-danger-border:                     darken($danger-color, 12%);
+
+// Danger-outline
+// (.btn--danger--outline) modifier
+$btn-danger-color-outline:              $danger-color;
+$btn-danger-bg-outline:                 transparent;
+$btn-danger-border-outline:             $danger-color;
+
+
+
+
+
+
 /* Danger Button
 ==========================================================================*/
 .btn--danger,

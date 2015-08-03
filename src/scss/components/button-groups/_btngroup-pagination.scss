@@ -9,84 +9,76 @@
 .btn-group-sm,
 .pagination > ul > li,
 .pagination > ul > li > a {
-  float: left;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  @include border-radius(0);
+    float: left;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    @include border-radius(0);
 }
 
 .pagination > ul {
-  padding-left: 0;
+    padding-left: 0;
 }
 
-.pagination > ul > li > a {
-  //border: 1px solid $base-color-ccc;
-  @include box-shadow(none);
+.pagination-gradient li {
+    @include gradient($base-color-eee, $base-color-eee, $base-white);
 }
 
-.pagination-gradient > ul > li {
-  @include gradient($base-color-eee, $base-color-eee, $base-white);
+.pagination li a {
+    @include box-shadow(none);
 }
 
-    //.pagination > ul > li > a,
-    //.pagination > ul > li > button {
-    //  background-color: transparent;
-    //  background: transparent;
-    //} 
-
-.btn-group > .btn,
-.btn-group-lg > .btn,
-.btn-group-sm > .btn,
-.pagination > ul > li > a {
-  //margin-right: 0;
-  @include left-float;
-  @include border-radius(0);
+.btn-group .btn,
+.btn-group-lg .btn,
+.btn-group-sm .btn,
+.pagination li a {
+    @include left-float;
+    @include border-radius(0);
 } 
   .btn-group > .btn + .btn,
   .btn-group-lg > .btn + .btn,
   .btn-group-sm > .btn + .btn,
   .pagination > ul > li > a,
   .pagination > ul > li > .btn  {
-    margin-left: -1px;
+      margin-left: -1px;
   }
   
   .pagination > ul > li:first-child > .btn,
   .pagination > ul > li:first-child > button {
-    margin-left: 0;
+      margin-left: 0;
   }
   
   /* .btn-group > .btn:last-child, */
   .pagination > ul > li:last-child > .btn,
   .pagination > ul > li:last-child > button {
-    margin-left: 0;
+      margin-left: 0;
   }
     // The active state 
     .btn-group > .btn.active,
     .pagination > ul > li.active,
     .pagination > ul > li > .active {
-      background-color: $info-color;
-      background: $info-color;
-      color: $base-white;
-      border-color: $info-color;
-      text-shadow: none;
+        background-color: $info-color;
+        background: $info-color;
+        color: $base-white;
+        border-color: $info-color;
+        text-shadow: none;
     }
 
 /* Pagination Large Size */
 .btn-group-lg > .btn,
 .pagination-lg > ul > li > a.btn {
-  padding: $base-padding-lg-vertical $base-padding-lg-horizontal;
-  float: left;
-  display: inline-block;
-  @include border-radius(0);
+    padding: $base-padding-lg-vertical $base-padding-lg-horizontal;
+    float: left;
+    display: inline-block;
+    @include border-radius(0);
 }
 /* Pagination Small Size */
 .btn-group-sm > .btn,
 .pagination-sm > ul > li > a.btn {
-  padding: $base-padding-sm-vertical $base-padding-sm-horizontal;
-  float: left;
-  display: inline-block;
-  @include border-radius(0);
+    padding: $base-padding-sm-vertical $base-padding-sm-horizontal;
+    float: left;
+    display: inline-block;
+    @include border-radius(0);
 }
 
 /* Removes the border */
@@ -97,6 +89,6 @@
 .list-group.no-b > li,
 .list-group.no-b > li > a,
 .list-group.no-b > a.list-group-element {
-  border: none;
-  border-color: transparent; 
+    border: none;
+    border-color: transparent;
 }

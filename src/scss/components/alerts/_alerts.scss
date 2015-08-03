@@ -111,35 +111,30 @@ span.close {
 
 
 
-////////////////////////////////////////
-//
-// Use these classes in your html
-// to for whatever alert you're 
-// needing to use.
-//
-////////////////////////////////////////
+/* Alerts modifiers
+==========================================================================*/
 
-.alert-success {
+.alert--success {
   @include alert(success);
   @extend .alert;
 }
 
-.alert-primary {
+.alert--primary {
   @include alert(primary);
   @extend .alert;
 }
 
-.alert-info {
+.alert--info {
   @include alert(info);
   @extend .alert;
 }
 
-.alert-warning {
+.alert--warning {
   @include alert(warning);
   @extend .alert;
 }
 
-.alert-danger {
+.alert--danger {
   @include alert(danger);
   @extend .alert;
 }

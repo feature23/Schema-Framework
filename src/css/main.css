@@ -824,58 +824,58 @@ p.lead,
     $Alerts
     
 \*------------------------------------*/
-.alert, .alert-success, .alert-primary, .alert-info, .alert-warning, .alert-danger {
+.alert, .alert--success, .alert--primary, .alert--info, .alert--warning, .alert--danger {
   border: 1px solid transparent;
   display: block;
   padding: 1rem;
   border-radius: 6px;
 }
-.alert h4, .alert-success h4, .alert-primary h4, .alert-info h4, .alert-warning h4, .alert-danger h4 {
+.alert h4, .alert--success h4, .alert--primary h4, .alert--info h4, .alert--warning h4, .alert--danger h4 {
   color: inherit;
   margin-top: 0;
 }
-.alert p, .alert-success p, .alert-primary p, .alert-info p, .alert-warning p, .alert-danger p {
+.alert p, .alert--success p, .alert--primary p, .alert--info p, .alert--warning p, .alert--danger p {
   color: inherit;
   margin: 0;
 }
-.alert i, .alert-success i, .alert-primary i, .alert-info i, .alert-warning i, .alert-danger i,
+.alert i, .alert--success i, .alert--primary i, .alert--info i, .alert--warning i, .alert--danger i,
 .alert span,
-.alert-success span,
-.alert-primary span,
-.alert-info span,
-.alert-warning span,
-.alert-danger span {
+.alert--success span,
+.alert--primary span,
+.alert--info span,
+.alert--warning span,
+.alert--danger span {
   float: right;
 }
-.alert a, .alert-success a, .alert-primary a, .alert-info a, .alert-warning a, .alert-danger a {
+.alert a, .alert--success a, .alert--primary a, .alert--info a, .alert--warning a, .alert--danger a {
   text-decoration: underline;
 }
-.alert a:hover, .alert-success a:hover, .alert-primary a:hover, .alert-info a:hover, .alert-warning a:hover, .alert-danger a:hover {
+.alert a:hover, .alert--success a:hover, .alert--primary a:hover, .alert--info a:hover, .alert--warning a:hover, .alert--danger a:hover {
   text-decoration: none;
 }
-.alert .btn, .alert-success .btn, .alert-primary .btn, .alert-info .btn, .alert-warning .btn, .alert-danger .btn {
+.alert .btn, .alert--success .btn, .alert--primary .btn, .alert--info .btn, .alert--warning .btn, .alert--danger .btn {
   margin-top: 1.4rem;
 }
 
-.alert i:before, .alert-success i:before, .alert-primary i:before, .alert-info i:before, .alert-warning i:before, .alert-danger i:before,
+.alert i:before, .alert--success i:before, .alert--primary i:before, .alert--info i:before, .alert--warning i:before, .alert--danger i:before,
 .alert .fa:before,
-.alert-success .fa:before,
-.alert-primary .fa:before,
-.alert-info .fa:before,
-.alert-warning .fa:before,
-.alert-danger .fa:before {
+.alert--success .fa:before,
+.alert--primary .fa:before,
+.alert--info .fa:before,
+.alert--warning .fa:before,
+.alert--danger .fa:before {
   display: inline-block;
   margin-top: 3px;
   margin-top: 0.1875rem;
 }
 
-.alert a, .alert-success a, .alert-primary a, .alert-info a, .alert-warning a, .alert-danger a,
+.alert a, .alert--success a, .alert--primary a, .alert--info a, .alert--warning a, .alert--danger a,
 .alert a:hover,
-.alert-success a:hover,
-.alert-primary a:hover,
-.alert-info a:hover,
-.alert-warning a:hover,
-.alert-danger a:hover {
+.alert--success a:hover,
+.alert--primary a:hover,
+.alert--info a:hover,
+.alert--warning a:hover,
+.alert--danger a:hover {
   color: inherit;
   font-weight: bold;
 }
@@ -887,31 +887,33 @@ span.close {
   cursor: pointer;
 }
 
-.alert-success {
+/* Alerts modifiers
+==========================================================================*/
+.alert--success {
   color: #25a25a;
   border-color: #2ecc71;
   background-color: #ecfbf2;
 }
 
-.alert-primary {
+.alert--primary {
   color: #217dbb;
   border-color: #3498db;
   background-color: #f5fafd;
 }
 
-.alert-info {
+.alert--info {
   color: #1c9f94;
   border-color: #24cabc;
   background-color: #f7fefd;
 }
 
-.alert-warning {
+.alert--warning {
   color: #c87f0a;
   border-color: #f39c12;
   background-color: #fef6ea;
 }
 
-.alert-danger {
+.alert--danger {
   color: #d62c1a;
   border-color: #e74c3c;
   background-color: #fef5f4;
@@ -922,6 +924,8 @@ span.close {
     $Badges
     
 \*------------------------------------*/
+/* Badges Element Shell (Also default badge)
+==========================================================================*/
 .badge {
   display: inline-block;
   padding: 0.26667rem 0.6rem;
@@ -939,23 +943,25 @@ span.close {
   min-width: 0.625rem;
 }
 
-.badge.success {
+/* Badges modifiers
+==========================================================================*/
+.badge--success {
   background-color: #2ecc71;
 }
 
-.badge.primary {
+.badge--primary {
   background-color: #3498db;
 }
 
-.badge.danger {
+.badge--danger {
   background-color: #e74c3c;
 }
 
-.badge.warning {
+.badge--warning {
   background-color: #f39c12;
 }
 
-.badge.info {
+.badge--info {
   background-color: #24cabc;
 }
 
@@ -964,6 +970,11 @@ span.close {
   margin-left: 0.5rem;
 }
 
+/* This removes the text-shadow
+ * on the badge inside of gradient buttons
+ * because it's a white shadow on a white
+ * text, and it's not legible.
+ */
 [class^="btn"] span.badge {
   text-shadow: 0 0;
 }
@@ -1023,12 +1034,7 @@ span.close {
   padding-left: 0;
 }
 
-.pagination > ul > li > a {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.pagination-gradient > ul > li {
+.pagination-gradient li {
   background: #eeeeee;
   background: -webkit-gradient(to top, color-stop(0, #eeeeee), color-stop(1, #fff));
   background: -o-linear-gradient(to top, #eeeeee, #fff);
@@ -1036,10 +1042,15 @@ span.close {
   background-image: linear-gradient(to top, #eeeeee, #fff);
 }
 
-.btn-group > .btn,
-.btn-group-lg > .btn,
-.btn-group-sm > .btn,
-.pagination > ul > li > a {
+.pagination li a {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-group .btn,
+.btn-group-lg .btn,
+.btn-group-sm .btn,
+.pagination li a {
   float: left;
   border-radius: 0;
 }
@@ -1826,201 +1837,10 @@ a:hover.btn--default--gradient {
 
 /*------------------------------------*\
 
-    $Easydropdown 
-    
-\*------------------------------------*/
-/* PREFIXED CSS */
-.dropdown,
-.dropdown div,
-.dropdown li,
-.dropdown div::after {
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
-}
-
-.dropdown .selected::after,
-.dropdown.scrollable div::after {
-  -webkit-pointer-events: none;
-  -moz-pointer-events: none;
-  -ms-pointer-events: none;
-  pointer-events: none;
-}
-
-/* WRAPPER */
-/* Change the background color to whatever you want to match your styles */
-.dropdown {
-  position: relative;
-  width: 160px;
-  border: 1px solid #cccccc;
-  cursor: pointer;
-  background: #fff;
-  color: #777777;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-      user-select: none;
-  border-radius: 6px;
-}
-
-.dropdown.open {
-  z-index: 2;
-}
-
-.dropdown:hover {
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-}
-
-.dropdown.focus {
-  -webkit-box-shadow: 0 0 5px rgba(51, 102, 248, 0.4);
-  box-shadow: 0 0 5px rgba(51, 102, 248, 0.4);
-}
-
-/* CARAT */
-/* Change the background color to whatever you want to match your styles */
-.dropdown .carat {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  margin-top: -3px;
-  border: 6px solid transparent;
-  border-top: 6px solid #cccccc;
-}
-
-.dropdown.open .carat {
-  margin-top: -10px;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid #cccccc;
-}
-
-/* OLD SELECT (HIDDEN) */
-.dropdown .old {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-}
-
-.dropdown select {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
-
-.dropdown.touch .old {
-  width: 100%;
-  height: 100%;
-}
-
-.dropdown.touch select {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-/* SELECTED FEEDBACK ITEM */
-.dropdown .selected,
-.dropdown li {
-  display: block;
-  line-height: 1;
-  color: inherit;
-  padding: 9px 12px;
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 16px;
-  font-size: 1rem;
-}
-
-.dropdown .selected::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 60px;
-}
-
-/* DROP DOWN WRAPPER */
-.dropdown div {
-  position: absolute;
-  height: 0;
-  left: -1px;
-  right: -1px;
-  top: 100%;
-  margin-top: -1px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-top: 1px solid #eee;
-  border-radius: 0 0 6px 6px;
-  overflow: hidden;
-  opacity: 0;
-}
-
-/* Height is adjusted by JS on open */
-.dropdown.open div {
-  opacity: 1;
-  z-index: 2;
-}
-
-/* FADE OVERLAY FOR SCROLLING LISTS */
-.dropdown.scrollable div::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 50px;
-}
-
-.dropdown.scrollable.bottom div::after {
-  opacity: 0;
-}
-
-/* DROP DOWN LIST */
-.dropdown ul {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  list-style: none;
-  overflow: hidden;
-  margin: 0;
-  padding-left: 0;
-}
-
-.dropdown.scrollable.open ul {
-  overflow-y: auto;
-}
-
-/* DROP DOWN LIST ITEMS */
-.dropdown li {
-  list-style: none;
-  padding: 8px 12px;
-  color: #777777;
-}
-
-/* .focus class is also added on hover */
-/* Change the background color to whatever you want to match your styles */
-.dropdown li.focus {
-  background: #3498db;
-  position: relative;
-  z-index: 3;
-  color: #fff;
-}
-
-.dropdown li.active {
-  font-weight: 700;
-}
-
-/*------------------------------------*\
-
     $Label Buttons
     
 \*------------------------------------*/
-.btn-label {
+.btn--label {
   vertical-align: middle;
   display: inline-block;
   padding: 0.025rem .25rem;
@@ -2035,27 +1855,29 @@ a:hover.btn--default--gradient {
   border-radius: 2px;
 }
 
-.btn-label.primary {
+/* Label Modifier
+==========================================================================*/
+.btn--label__primary {
   background-color: #3498db;
   color: #fff;
 }
 
-.btn-label.success {
+.btn--label__success {
   background-color: #2ecc71;
   color: #fff;
 }
 
-.btn-label.danger {
+.btn--label__danger {
   background-color: #e74c3c;
   color: #fff;
 }
 
-.btn-label.info {
+.btn--label__info {
   background-color: #24cabc;
   color: #fff;
 }
 
-.btn-label.warning {
+.btn--label__warning {
   background-color: #f39c12;
   color: #fff;
 }

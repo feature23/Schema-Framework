@@ -2,6 +2,26 @@
     $Default Button Styles
 \*------------------------------------*/
 
+// Variables
+// =========================================================================*/
+
+// Default
+// (.btn--default) modifier
+$btn-default-color:                     $base-color-777;
+$btn-default-bg:                        $base-bg;
+$btn-default-border:                    $base-color-ccc;
+
+// Default-outline
+// (.btn--default-outline) modifier
+$btn-default-color-outline:             $base-color-777;
+$btn-default-bg-outline:                transparent;
+$btn-default-border-outline:            $base-color-777;
+
+
+
+
+
+
 /* Default Button
 ==========================================================================*/
 /**

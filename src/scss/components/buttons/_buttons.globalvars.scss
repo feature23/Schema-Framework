@@ -1,0 +1,103 @@
+// =============================================================
+//
+//   Global variables for the Button component.
+//
+//   You'll find the variables for specific components
+//   (dangerbuttons.scss) at the top of each .scss file.
+//
+//   I did this for flexibility of editing.
+//
+// =============================================================
+
+
+
+
+
+// Button radius
+// =============================================================
+$btn-radius:                            4px;
+
+
+
+// Button Font things and line height
+// =============================================================
+$btn-line-height:                       $base-line-height;
+$btn-line-height-lg:                    ($base-line-height * 1.3);
+$btn-line-height-sm:                    $baseline-size;
+
+
+$btn-font-size:                         $baseline-size;
+$btn-font-size-lg:                      $base-font-size-large;
+$btn-font-size-sm:                      ($baseline-size * 0.875);
+
+$btn-font-weight:                       $font-family-weight;
+
+
+
+
+// Button Padding sizes
+// =============================================================
+$btn-horizontal-padding:                $base-padding-horizontal;
+$btn-vertical-padding:                  $base-padding-lg-vertical;
+
+$btn-horizontal-padding-lg:             $base-padding-lg-horizontal;
+$btn-vertical-padding-lg:               $base-padding-lg-vertical;
+
+$btn-horizontal-padding-sm:             $base-padding-sm-horizontal;
+$btn-vertical-padding-sm:               $base-padding-sm-vertical;
+
+
+
+
+
+// =============================================================
+//
+//  A button builder
+//  Create different buttons with color,
+//  background color, and border color.
+//
+// =============================================================
+
+@mixin button-version ($color, $background, $border) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    @include transition(all .25s ease);
+
+    &:hover {
+        background-color: darken($background, 5%);
+        border-color: darken($border, 5%);
+    }
+    &:active {
+        color: $color;
+        background-color: darken($background, 8.5%);
+        border-color: darken($border, 8.5%);
+        @include box-shadow(inset 0px 2px 4px 1px rgba(0,0,0,.15));
+        outline: 0;
+    }
+}
+
+@mixin button-size(
+    $button-padding-vertical,
+    $button-padding-horizontal,
+    $button-font-size,
+    $button-line-height,
+    $button-radius) {
+        padding: $button-padding-vertical $button-padding-horizontal;
+        font-size: $button-font-size;
+        line-height: $button-line-height;
+        border-radius: $button-radius;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

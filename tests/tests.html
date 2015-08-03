@@ -95,6 +95,14 @@
     </p>
   </div>
   <div class="container">
+      <span class="badge">28</span>
+      <span class="badge badge--info">28</span>
+      <span class="badge badge--danger">28</span>
+      <span class="badge badge--primary">28</span>
+      <span class="badge badge--success">28</span>
+      <span class="badge badge--warning">28</span>
+  </div>
+  <div class="container">
     <div class="row">
       <p class="col3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aut excepturi deserunt dolorem veniam, laborum sint delectus, necessitatibus illum eum fugit omnis nulla quos sunt temporibus consequuntur. Quos fugit, a!</p>
       <p class="col3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime aut excepturi deserunt dolorem veniam, laborum sint delectus, necessitatibus illum eum fugit omnis nulla quos sunt temporibus consequuntur. Quos fugit, a!</p>
@@ -166,7 +174,7 @@
         <input type="checkbox"> Check this box
       </label>
      </div>
-     <button type="submit" class="btn btn-primary">Submit</button>
+     <button type="submit" class="btn btn--primary">Submit</button>
     </form>
   </div>
 
@@ -176,7 +184,7 @@
     <div class="form-element-group">
       <input class="form-element" type="text">
       <span class="form-group-btn">
-        <button class="btn btn-danger">Danger <span class="fa fa-warning"></span></button>
+        <button class="btn btn--danger">Danger <span class="fa fa-warning"></span></button>
       </span>
     </div>
   </div>
@@ -187,7 +195,7 @@
   <div class="container">
     <div class="form-element-group">
       <span class="form-group-btn">
-          <button class="btn btn-info">Fly Away <span class="fa fa-plane"></button>
+          <button class="btn btn--info">Fly Away <span class="fa fa-plane"></button>
       </span>
       <input class="form-element" type="text">
     </div>
@@ -227,9 +235,9 @@
 
   <div class="container">
     <div class="btn-group">
-     <button class="btn btn-default">Button One</button>
-     <button class="btn btn-default">Button Two</button>
-     <button class="btn btn-default">Button Three</button>
+     <button class="btn btn--default">Button One</button>
+     <button class="btn btn--default">Button Two</button>
+     <button class="btn btn--default">Button Three</button>
     </div>
   </div>
     
@@ -238,16 +246,68 @@
 
   <div class="container">
     <div class="btn-group">
-     <a href="#" class="btn btn-primary-outline">Button One</a>
-     <a href="#" class="btn btn-primary-outline">Button Two</a>
-     <a href="#" class="btn btn-primary-outline">Button Three</a>
+     <a href="#" class="btn btn--primary--outline">Button One</a>
+     <a href="#" class="btn btn--primary--outline">Button Two</a>
+     <a href="#" class="btn btn--primary--outline">Button Three</a>
     </div>
   </div>
+
+
+  <!-- This section is code for Bootstrap
+       radio buttons to act like real
+       buttons based on Schema CSS
+ -->
+
+  <style>
+      .btn input[type=radio] {
+          position: absolute;
+          clip: rect(0, 0, 0, 0);
+          pointer-events: none;
+      }
+      .radio-btns > .btn-group > .btn.btn--default.active > input[type=radio],
+      .radio-btns > .btn-group > .btn.btn--default.active {
+          box-shadow: inset 0px 2px 4px 1px rgba(0,0,0,.15);
+          background-color: #f2f2f2!important;
+          border-color: #bfbfbf!important;
+          color: #777!important;
+      }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <div class="container radio-btns">
+      <div class="btn-group" data-toggle="buttons">
+          <label for="" class="btn btn--default">
+              <input type="radio" name="radio-btns" autocomplete="off" />
+              Studio
+          </label>
+          <label for="" class="btn btn--default">
+              <input type="radio" name="radio-btns" autocomplete="off" />
+              1 Bedroom
+          </label>
+          <label for="" class="btn btn--default">
+              <input type="radio" name="radio-btns" autocomplete="off" />
+              2 Bedroom
+          </label>
+          <label for="" class="btn btn--default">
+              <input type="radio" name="radio-btns" autocomplete="off" />
+              3 Bedroom
+          </label>
+          <label for="" class="btn btn--default">
+              <input type="radio" name="radio-btns" autocomplete="off" />
+              4 Bedroom
+          </label>
+      </div>
+  </div>
+
+  <!--
+       End Section for radio buttons
+  -->
     
 
   <br /><br />
   
-  <div class"container">
+  <div class="container">
     <p class="lead">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ullam suscipit quaerat, nam cum. Porro rerum earum beatae distinctio, ea quas ex fuga quis minus vitae quam, saepe, atque fugit.
     </p>
@@ -258,7 +318,7 @@
 
 
   <div class="container">
-    <div class="alert-info">
+    <div class="alert--info">
      <p>This is some <strong>important information</strong> so please pay attention.<span class="fa fa-info"></span></p>
     </div>
   </div>
@@ -272,11 +332,11 @@
           <a href="#" class="">Brand Here</a>
         </div>
         <nav class="right-float">
-          <a href="#" class="btn-pill">Link</a>
-          <a href="#" class="btn-pill">Link Two</a>
-          <a href="#" class="btn-pill">Link Three</a>
-          <a href="#" class="btn-pill">Link Four</a>
-          <a href="#" class="btn btn-pill btn-primary-outline">Link Outline</a>
+          <a href="#" class="btn--pill">Link</a>
+          <a href="#" class="btn--pill">Link Two</a>
+          <a href="#" class="btn--pill">Link Three</a>
+          <a href="#" class="btn--pill">Link Four</a>
+          <a href="#" class="btn btn--pill btn--primary--outline">Link Outline</a>
         </nav>
       </div>
     </div>
@@ -291,25 +351,25 @@
     
   
   <div class="container">
-    <div class="alert-primary alert-gone fade in">
+    <div class="alert--primary alert-gone fade in">
      <p>This is some <strong>important information</strong> so please pay attention.<span class="close">&times;</span></p>
     </div>
   </div>
 
   <div class="container">
-    <div class="alert-info alert-gone fade in">
+    <div class="alert--info alert-gone fade in">
      <p>This is some <strong>important information</strong> so please pay attention.<span class="close">&times;</span></p>
     </div>
   </div>
 
   <div class="container">
-    <div class="alert-danger alert-gone fade in">
+    <div class="alert--danger alert-gone fade in">
      <span class="close">&times;</span>
      <h4>No Success!</h4>
      <p><a href="#">Go here for more info</a></p>
      <p>
-      <button class="btn btn-danger">Do Some Action</button>
-      <button class="btn btn-link">Cancel</button>
+      <button class="btn btn--danger">Do Some Action</button>
+      <button class="btn btn--link">Cancel</button>
      </p>
     </div>
   </div>
@@ -328,27 +388,27 @@
     <div class="form-element-group">
      <input class="form-element" type="text" />
      <span class="form-group-btn">
-      <button class="btn btn-default">Default</button>
+      <button class="btn btn--default">Default</button>
      </span>
     </div>
   </div>
   
   <div class="container">
     <div class="btn-group">
-     <button class="btn btn-primary">Button One</button>
-     <button class="btn btn-primary">Button Two</button>
-     <button class="btn btn-primary">Button Three</button>
+     <button class="btn btn--primary">Button One</button>
+     <button class="btn btn--primary">Button Two</button>
+     <button class="btn btn--primary">Button Three</button>
     </div>
   </div>
   
   <div class="container">
-    <div class="alert-success alert-gone fade in">
+    <div class="alert--success alert-gone fade in">
       <p>Welcome,  <span class="close">×</span></p>
     </div>
   </div>
     
   <div class="container">
-    <div class="alert-danger alert-gone fade in">
+    <div class="alert--danger alert-gone fade in">
       <p>Click the X to <strong>remove this alert</strong>. Use class <code>.alert-removed</code> 
       to remove this alert <span class="close">×</span></p>
     </div>
@@ -356,50 +416,50 @@
     
 
   <div class="container">
-    <span class="btn-label">Default Label</span>
-    <span class="btn-label primary">Default Primary</span>
-    <span class="btn-label success">Success Label</span>
-    <span class="btn-label info">Info Label</span>
-    <span class="btn-label warning">Warning Label</span>
-    <span class="btn-label danger">Danger Label</span>
+    <span class="btn--label">Default Label</span>
+    <span class="btn--label btn--label__primary">Default Primary</span>
+    <span class="btn--label btn--label__success">Success Label</span>
+    <span class="btn--label btn--label__info">Info Label</span>
+    <span class="btn--label btn--label__warning">Warning Label</span>
+    <span class="btn--label btn--label__danger">Danger Label</span>
   </div>
   
   <div class="pagination clearfix">
     <ul>
-      <li><a href="#" class="btn btn-default-gradient">«</a></li>
-      <li><a href="#" class="btn btn-default-gradient">1</a></li>
-      <li><a href="#" class="btn btn-default-gradient">2</a></li>
-      <li><a href="#" class="btn btn-default-gradient active">3</a></li>
-      <li><a href="#" class="btn btn-default-gradient">4</a></li>
-      <li><a href="#" class="btn btn-default-gradient">5</a></li>
-      <li><a href="#" class="btn btn-default-gradient">6</a></li>
-      <li><a href="#" class="btn btn-default-gradient">»</a></li>
+      <li><a href="#" class="btn btn--default--gradient">«</a></li>
+      <li><a href="#" class="btn btn--default--gradient">1</a></li>
+      <li><a href="#" class="btn btn--default--gradient">2</a></li>
+      <li><a href="#" class="btn btn--default--gradient active">3</a></li>
+      <li><a href="#" class="btn btn--default--gradient">4</a></li>
+      <li><a href="#" class="btn btn--default--gradient">5</a></li>
+      <li><a href="#" class="btn btn--default--gradient">6</a></li>
+      <li><a href="#" class="btn btn--default--gradient">»</a></li>
     </ul>
   </div>
   
   <div class="pagination no-b clearfix">
     <ul>
-      <li><a href="#" class="btn btn-default">«</a></li>
-      <li><a href="#" class="btn btn-default">1</a></li>
-      <li><a href="#" class="btn btn-default">2</a></li>
-      <li><a href="#" class="btn btn-default">3</a></li>
-      <li><a href="#" class="btn btn-default">4</a></li>
-      <li><a href="#" class="btn btn-default">5</a></li>
-      <li><a href="#" class="btn btn-default">6</a></li>
-      <li><a href="#" class="btn btn-default">»</a></li>
+      <li><a href="#" class="btn btn--default">«</a></li>
+      <li><a href="#" class="btn btn--default">1</a></li>
+      <li><a href="#" class="btn btn--default">2</a></li>
+      <li><a href="#" class="btn btn--default">3</a></li>
+      <li><a href="#" class="btn btn--default">4</a></li>
+      <li><a href="#" class="btn btn--default">5</a></li>
+      <li><a href="#" class="btn btn--default">6</a></li>
+      <li><a href="#" class="btn btn--default">»</a></li>
     </ul>
   </div>
   
-  <div class="pagination clearfix">
+  <div class="pagination pagination-lg clearfix">
     <ul>
-      <li><a href="#" class="btn btn-primary-gradient">«</a></li>
-      <li><a href="#" class="btn btn-primary-gradient">1</a></li>
-      <li><a href="#" class="btn btn-primary-gradient">2</a></li>
-      <li><a href="#" class="btn btn-primary-gradient">3</a></li>
-      <li><a href="#" class="btn btn-primary-gradient">4</a></li>
-      <li><a href="#" class="btn btn-primary-gradient">5</a></li>
-      <li><a href="#" class="btn btn-primary-gradient">6</a></li>
-      <li><a href="#" class="btn btn-primary-gradient">»</a></li>
+      <li><a href="#" class="btn btn--default">«</a></li>
+      <li><a href="#" class="btn btn--default">1</a></li>
+      <li><a href="#" class="btn btn--default">2</a></li>
+      <li><a href="#" class="btn btn--default">3</a></li>
+      <li><a href="#" class="btn btn--default">4</a></li>
+      <li><a href="#" class="btn btn--default">5</a></li>
+      <li><a href="#" class="btn btn--default">6</a></li>
+      <li><a href="#" class="btn btn--default">»</a></li>
     </ul>
   </div>
   
@@ -407,14 +467,14 @@
   
   <div class="pagination clearfix">
     <ul>
-      <li><a href="#" class="btn btn-info">«</a></li>
-      <li><a href="#" class="btn btn-info">1</a></li>
-      <li><a href="#" class="btn btn-info">2</a></li>
-      <li><a href="#" class="btn btn-info">3</a></li>
-      <li><a href="#" class="btn btn-info">4</a></li>
-      <li><a href="#" class="btn btn-info">5</a></li>
-      <li><a href="#" class="btn btn-info">6</a></li>
-      <li><a href="#" class="btn btn-info">»</a></li>
+      <li><a href="#" class="btn btn--info">«</a></li>
+      <li><a href="#" class="btn btn--info">1</a></li>
+      <li><a href="#" class="btn btn--info">2</a></li>
+      <li><a href="#" class="btn btn--info">3</a></li>
+      <li><a href="#" class="btn btn--info">4</a></li>
+      <li><a href="#" class="btn btn--info">5</a></li>
+      <li><a href="#" class="btn btn--info">6</a></li>
+      <li><a href="#" class="btn btn--info">»</a></li>
     </ul>
   </div>
   

@@ -2,6 +2,26 @@
     $Warning Button Styles
 \*------------------------------------*/
 
+// Variables
+// =========================================================================*/
+
+// Warning
+// (.btn--warning) modifier
+$btn-warning-color:                     $base-bg;
+$btn-warning-bg:                        $warning-color;
+$btn-warning-border:                    darken($warning-color, 12%);
+
+// Warning-outline
+// (.btn--warning--outline) modifier
+$btn-warning-color-outline:             $warning-color;
+$btn-warning-bg-outline:                transparent;
+$btn-warning-border-outline:            $warning-color;
+
+
+
+
+
+
 /* Warning Button
 ==========================================================================*/
 .btn--warning,

@@ -49,7 +49,7 @@
 
 // Buttons Component
 //==========================================================================
-@import 'components/buttons/_buttons.variables.scss';
+@import 'components/buttons/buttons.globalvars';
 @import 'components/buttons/_buttons.base.scss';
 @import "components/buttons/defaultbuttons.scss";
 @import "components/buttons/primarybuttons.scss";
@@ -60,13 +60,11 @@
 
 
 
-@import 'components/dropdowns/dropdowns';
 @import 'components/labels/labels';
 @import 'components/list-groups/listgroup';
 @import 'components/navigation/navigation';
 @import 'components/panels/panel';
 @import 'components/tables/tables';
-
 @import 'helpers/_state.scss';
 
 

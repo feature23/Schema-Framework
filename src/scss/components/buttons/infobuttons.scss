@@ -2,6 +2,26 @@
     $Info Button Styles
 \*------------------------------------*/
 
+// Variables
+// =========================================================================*/
+
+// Info
+// (.btn--info) modifier
+$btn-info-color:                        $base-bg;
+$btn-info-bg:                           $info-color;
+$btn-info-border:                       darken($info-color, 12%);;
+
+// Info-outline
+// (.btn--info--outline) modifier
+$btn-info-color-outline:                $info-color;
+$btn-info-bg-outline:                   transparent;
+$btn-info-border-outline:               $info-color;
+
+
+
+
+
+
 /* Info Button
 ==========================================================================*/
 .btn--info,
